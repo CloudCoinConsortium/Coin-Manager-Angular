@@ -1,0 +1,95 @@
+<div class="authWrapper authWrapperAdvncSetp">
+  <ng-container>
+    <a href="javascript:;" routerLink="/skywallet/create-address" class="backlinkBtn"><img src="assets/back_arrow.svg"
+        alt=""></a>
+  </ng-container>
+  <div class="bodyInnerWrapper">
+    <div class="stepperHolder">
+      <div class="stepperWrap">
+        <div class="step stepActive">
+          <div class="circleWrap">
+            <div class="circle"></div>
+          </div>
+          <div class="steptextWrap">
+            <span class="amount">Address setup</span>
+          </div>
+        </div>
+        <div class="step stepActive">
+          <div class="circleWrap">
+            <div class="circle"></div>
+          </div>
+          <div class="steptextWrap">
+            <span class="amount">Pass Key</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="circleWrap">
+            <div class="circle"></div>
+          </div>
+          <div class="steptextWrap">
+            <span class="amount">Completed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <ng-container>
+            <p class="titleOne">Virtual Pass Key</p>
+            <p class="titleTwo" style="opacity: 0.8;">You will need a Pass Key to access your SkyVault. You can create a
+              new Pass Key or add one that you have previously created. The Pass Key is a PNG file that contains 25
+              verification keys. You will need to keep this file safe.</p>
+            <div class="skyAddressFieldWrap">
+              <div class="uploadBtnWrap" *ngIf="!showDownload">
+                <a href="javascript:;" class="btnCustomBlue btnLarge" [ngClass]="{'btnDisable' : isDownload}"
+                  (click)="isDownload ? '' : download()">Generate New Pass Key</a>
+                <a class="uploadLaterLink" type="button" (click)="fileInput.click()">
+                  <a>IMPORT MY OWN Pass Key</a>
+                  <input #fileInput type="file" (change)="onFileInput($event)" accept=".png, .id, .bin"
+                    style="display:none;" />
+                </a>
+              </div>
+              <div class="downloadingCCWrap" *ngIf="showDownload">
+                <div class="downloadBar" [ngStyle]="{'width': this.payload?.progress != 100 ? '40%' : '99%'}"></div>
+                <span class="downloadText"><img src="assets/download_cloucoin.svg" alt="">Downloading Pass
+                  Key...
+                </span>
+                <img src="assets/cross.svg" alt="" class="dwnloadStatIcon" *ngIf="this.payload?.progress != 100">
+                <img src="assets/tick_green.svg" *ngIf="this.payload?.progress == 100" alt="" class="dwnloadStatIcon">
+              </div>
+              <ng-container>
+
+                <span class="errorMsg" *ngIf="errorInfo"><img src="assets/error_info_icon.svg"
+                    alt="error icon">{{errorMsg}}</span>
+                <span class="successMsg" *ngIf="successInfo"><img src="assets/info_green.svg"
+                    alt="error icon">{{successMsg}}</span>
+              </ng-container>
+            </div>
+          </ng-container>
+
+        </div>
+        <div class="col-md-4">
+          <img src="assets/advnc-setup-img-black-white.png" alt="rocket image" class="stepperMainImg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottomPartSubmit">
+    <div class="bottomFooter">
+      <div class="container">
+        <a href="javascript:;" class="btnCustomBlue btnLarge" (click)="continue ? createSky() : ''"
+          [ngClass]="{btnDisable: continue === false}">Continue</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="onEventLoadWrap" *ngIf="showLoader">
+  <ng-container>
+    <div class="text-center loader_show">
+      <ng-lottie height="150px" [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+      <span style="color:#ffffff">Creating SkyVault...</span>
+    </div>
+  </ng-container>
+</div>

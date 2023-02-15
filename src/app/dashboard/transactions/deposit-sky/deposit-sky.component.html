@@ -1,0 +1,170 @@
+<div class="" *ngIf="!afterClick">
+  <div class="transWrapper" *ngIf="type === 'skywallet'">
+    <div class="headerbackWrap">
+      <a href="javascript:;" routerLink="/dashboard/home" class="backBtnInHeader"><img src="assets/arrow.svg"
+          alt=""></a>
+      <span class="titleOne">Deposit CC To {{userSky}}</span>
+    </div>
+    <div class="transBody">
+      <ng-container>
+        <form [formGroup]="exportForm">
+          <div class="formInline">
+            <label>Deposit To: </label>
+            <span>{{userSky}}</span>
+          </div>
+          <div class="gap20"></div>
+          <div class="formField">
+            <label for="username">From:</label>
+            <div class="customeDropdownTwo" (clickOutside)="closeDropdown()">
+              <div class="triger" (click)="customSelTogglerThree()">
+                <img [src]="cSelectorImgThree" alt="image" *ngIf="cSelectorImgThree != ''">
+                <span>{{cSelectorTextThree}}</span>
+              </div>
+              <div class="menuShowTwo scroll" *ngIf="customSelectorOpenThree">
+                <div class="menus" (click)="customSelectorThree(data.name, 'local')" *ngFor="let data of all">
+                  <img src="assets/folder-w-border.svg" alt="icon">
+                  <span>{{data.name}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gap10"></div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="formField">
+                <label for="">Amount</label>
+              </div>
+            </div>
+            <div class="col-md-5 dispFlex dispFlexPriceTrans">
+              <div class="inputTagWrapper">
+                <span href="javascript:;" class="inpTag">CC</span>
+                <input type="text" class="form-control" placeholder="0" formControlName="amount"
+                  (keypress)="_keyUp($event)">
+              </div>
+            </div>
+          </div>
+          <div class="gap20"></div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="gap10"></div>
+              <div class="formField">
+                <label for="">Remarks <small>(optional)</small></label>
+                <input type="text" placeholder="Ex: Send it to Antoine" formControlName="tag">
+              </div>
+              <div *ngIf="isValidInput('tag')">
+                <span class="errorMsg" *ngIf="exportForm.controls['tag'].errors?.maxlength"><img
+                    src="assets/error_info_icon.svg" alt="error icon">Remarks can't be longer than 64
+                  characters.</span>
+              </div>
+
+            </div>
+          </div>
+        </form>
+      </ng-container>
+      <div class="transBottomFooter">
+        <a href="javascript:void(0);" [ngClass]="{'btnDisable': this.exportForm.invalid && this.export == false }"
+          (click)="showLoader ? '' : deposit()" class="btnCustomBlue">Deposit CC</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transWrapper" *ngIf="type === 'localwallet'">
+    <div class="headerbackWrap">
+      <a href="javascript:;" routerLink="/dashboard/home" class="backBtnInHeader"><img src="assets/arrow.svg"
+          alt=""></a>
+      <span class="titleOne">Send CC To SkyVault</span>
+    </div>
+    <div class="transBody">
+      <ng-container>
+        <form [formGroup]="exportForm">
+          <div class="formInline">
+            <label>Send From: </label>
+            <span>{{userLocal}}</span>
+          </div>
+          <div class="gap20"></div>
+          <div class="lineSection">
+            <div class="customeDropdownTwo mb-2" (clickOutside)="closeDropdownSky()">
+              <div class="triger" (click)="customSelToggler()">
+                <img [src]="cSelectorImgSky" height="20" alt="">
+                <span>{{cSelectorTextSky}}</span>
+              </div>
+              <div class="menuShowTwo scroll" *ngIf="customSelectorOpenSky">
+                <div class="menus" *ngFor="let sky of skyAll" (click)="customSelector(sky.name)">
+                  <img src="assets/cloud-transfer.svg" alt="icon">
+                  <span>{{sky.name}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gap10"></div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="formField">
+                <label for="">Amount</label>
+              </div>
+            </div>
+            <div class="col-md-5 dispFlex dispFlexPriceTrans">
+              <div class="inputTagWrapper">
+                <span href="javascript:;" class="inpTag">CC</span>
+                <input type="text" style="text-align:center;" placeholder="0" formControlName="amount"
+                  (keypress)="_keyUp($event)">
+              </div>
+            </div>
+          </div>
+          <div class="gap20"></div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="gap10"></div>
+              <div class="formField">
+                <label for="">Remarks <small>(optional)</small></label>
+                <input type="text" placeholder="Ex: Send it to Antoine" formControlName="tag">
+              </div>
+              <div *ngIf="isValidInput('tag')">
+                <span class="errorMsg" *ngIf="exportForm.controls['tag'].errors?.maxlength"><img
+                    src="assets/error_info_icon.svg" alt="error icon">Remarks can't be longer than 64
+                  characters.</span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </ng-container>
+      <div class="transBottomFooter">
+        <a href="javascript:void(0);" [ngClass]="{'btnDisable': this.exportForm.invalid || this.export == false }"
+          (click)="showLoader ? '' : deposit()" class="btnCustomBlue">Send CC</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="transWrapper" *ngIf="afterClick">
+  <div class="headerbackWrap">
+    <span class="titleOne">Error: Some of your coins were counterfeit. </span>
+  </div>
+  <div class="transBody">
+    <div class="gap10"></div>
+    <div class="formField">
+      <label for="">Total coins attempted to send: &nbsp; <span
+          style="opacity: 0.7;">{{this.payload.data?.TotalCoins}}</span></label>
+    </div>
+    <div class="formField">
+      <label for="">Total authentic coins sent: &nbsp; <span
+          style="opacity: 0.7;">{{this.payload.data?.TotalAuthentic}}</span></label>
+    </div>
+    <div class="formField">
+      <label for="">Total counterfeit coins not sent: &nbsp; <span
+          style="opacity: 0.7;">{{this.payload.data?.TotalCounterfeit}}</span></label>
+    </div>
+    <div class="gap20"></div>
+    <a href="javascript:;" class="btnCustomBlue btnLarge" (click)="go()">Close</a>
+  </div>
+</div>
+
+<div class="onEventLoadWrap" *ngIf="showLoader">
+  <ng-container>
+    <div class="text-center loader_show">
+      <ng-lottie height="150px" [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+      <span style="color:#ffffff">{{loadingMessage}}</span>
+    </div>
+  </ng-container>
+</div>

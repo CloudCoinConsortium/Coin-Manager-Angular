@@ -1,0 +1,51 @@
+<div class="authWrapper">
+  <a href="javascript:;" routerLink="/skywallet/upload-cc" class="backlinkBtn"><img src="assets/back_arrow.svg"
+      alt=""></a>
+  <div class="bodyInnerWrapper">
+    <div class="stepperHolder">
+      <div class="stepperWrap">
+        <div class="step stepActive">
+          <div class="circleWrap">
+            <div class="circle"></div>
+          </div>
+          <div class="steptextWrap">
+            <span class="amount">Address setup</span>
+          </div>
+        </div>
+        <div class="step stepActive">
+          <div class="circleWrap">
+            <div class="circle"></div>
+          </div>
+          <div class="steptextWrap">
+            <span class="amount">Pass Key</span>
+          </div>
+        </div>
+        <div class="step stepActive">
+          <div class="circleWrap">
+            <div class="circle"></div>
+          </div>
+          <div class="steptextWrap">
+            <span class="amount">Completed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2 class="titleOne"><span style="color: #0884FF;">{{user}}</span> has been created.</h2>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/ready-img-black-white.png" alt="rocket image" class="stepperMainImg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottomPartSubmit">
+    <div class="bottomFooter">
+      <div class="container">
+        <a href="javascript:;" class="btnCustomBlue btnLarge" routerLink="/dashboard" (click)="go()">Go To Dashboard</a>
+      </div>
+    </div>
+  </div>
+</div>

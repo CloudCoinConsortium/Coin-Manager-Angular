@@ -1,0 +1,174 @@
+<div class="settingsWrapper">
+  <div class="headerbackWrap">
+    <span class="titleOne">Settings</span>
+  </div>
+  <div class="gap10"></div>
+  <div class="settingBody">
+    <div class="tabHolder">
+      <div class="tabHeader">
+        <a href="javascript:;" class="tabItem" [ngClass]="tabSelector == 'performance' ? 'active' : ''"
+          (click)="tabToggler('performance')">Performance</a>
+        <a href="javascript:;" class="tabItem" [ngClass]="tabSelector == 'nft' ? 'active' : ''"
+          (click)="tabToggler('nft')">NFT Publishing</a>
+        <div class="tabBody">
+          <div class="tabPerformCont" *ngIf="tabSelector == 'performance'">
+            <h2 class="subHedOne">Performance Settings</h2>
+            <p class="textOne">These settings are used to manually control your server timeouts, modes of transaction,
+              etc.
+            </p>
+            <p class="note"><img src="assets/info-white.svg" alt="icon" data-toggle="tooltip" data-placement="top"
+                ngbTooltip="Minimum means that it is faster but more likely to time out. Maximum means it is slower and less likely to time out.">
+              These are optimised based on your internet speed.
+              & location</p>
+            <div class="gap20"></div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="formField">
+                  <label for="">Max Notes <img data-toggle="tooltip" data-placement="top"
+                      ngbTooltip="Coins the program will send at one time." src="assets/question-white.svg"
+                      alt="icon"></label>
+                  <span class="text-white">1</span>
+                  <mat-slider style="width:65%" class="min" thumbLabel [displayWith]="formatLabel1"
+                    (change)="updateSetting($event, 'max')" [value]="max" tickInterval="100" min="1" max="1800"
+                    aria-label="units"></mat-slider>
+                  <span class="text-white">1800</span>
+
+                  <span class="badge badge-primary"
+                    style="border-radius:100%; width:auto; height:30px; padding-top:10px; margin-left:60px;">{{max}}</span>
+                </div>
+
+                <div class="formField">
+                  <label for="">Request Timeout <img data-toggle="tooltip" data-placement="top"
+                      ngbTooltip="This is the amount of time the program will wait for a RAIDA to respond before it gives up. Normally a RAIDA should respond within .5 seconds. Increasing this to 100% will have it wait for 2 seconds. You can reduce this time to make the program run faster at the expense of accuracy."
+                      src="assets/question-white.svg" alt="icon"></label>
+                  <span class="text-white">1%</span>
+                  <mat-slider style="width:65%" class="min" thumbLabel [displayWith]="formatLabel"
+                    (change)="updateSetting($event, 'req')" [value]="req" tickInterval="100" min="1" max="100"
+                    aria-label="units"></mat-slider>
+                  <span class="text-white">100%</span>
+
+                  <span class="badge badge-primary"
+                    style="border-radius:100%; width:auto; height:30px; padding-top:10px; margin-left:50px;">{{req}}</span>
+
+                </div>
+
+                <div class="formField">
+                  <label for="">Echo Timeout <img data-toggle="tooltip" data-placement="top"
+                      ngbTooltip="This is the amount of time the program will wait for a RAIDA to respond before it gives up. Normally a RAIDA should respond within .5 seconds. Increasing this to 100% will have it wait for 2 seconds. You can reduce this time to make the program run faster at the expense of accuracy."
+                      src="assets/question-white.svg" alt="icon"></label>
+                  <span class="text-white">1%</span>
+                  <mat-slider style="width:65%" class="min" thumbLabel [displayWith]="formatLabel"
+                    (change)="updateSetting($event, 'echo')" [value]="echo" tickInterval="100" min="1" max="100"
+                    aria-label="units"></mat-slider>
+                  <span class="text-white">100%</span>
+
+                  <span class="badge badge-primary"
+                    style="border-radius:100%; width:auto; height:30px; padding-top:10px; margin-left:50px;">{{echo}}</span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="tabSelector == 'nft' ">
+            <form [formGroup]="nftSettingsForm" (ngSubmit)="onSubmit(nftSettingsForm)">
+              <ng-container>
+                <p class="titleTwo" style="opacity: 0.8;"> You can publish your NFTs on your web server and record their
+                  authenticity in your DNS server.
+                  This allows people to verify the authenticity of the NFTs you have created and will make them more
+                  valuable.
+                </p>
+                <div class="gap10"></div>
+                <p class="titleTwo" style="opacity: 0.8;"> You can find instructions on how to do this here:
+                </p>
+                <p>
+                  <a href="https://github.com/CloudCoinConsortium/CoinManager/tree/main/nft"
+                    target="_blank">https://github.com/CloudCoinConsortium/CoinManager/tree/main/nft</a>
+                </p>
+
+                <div class="formfield">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="dark_mode_text" for="qualname"> Your Domain Name:
+                        <span class="ml-2">
+                          <img src="assets/icons_info1.png"
+                            title="You can create records in your DNS Server that prove that you are the creator of the NFT and customize each NFT."
+                            style="height: 18px ; width:18px" />
+                        </span>
+                      </label>
+                    </div>
+                    <div class="col-md-2">
+                      <input class="form-control text_box_two" type="text" formControlName="dnsname"
+                        placeholder="YourDomain.com" maxlength="61" (keydown.enter)="$event.preventDefault()">
+                    </div>
+                  </div>
+                  <div *ngIf="isValidInput('dnsname')">
+                    <span class="errorMsg1"><img src="assets/error_info_icon.svg" alt="error icon">Please enter domain
+                      name in valid format. Max length is 61.</span>
+                  </div>
+                </div>
+                <div class="gap10"></div>
+                <div class="formfield">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="dark_mode_text" for="url">Upload NFTs To:</label>
+                    </div>
+                    <div class="col-md-2">
+                      <input class="form-control text_box_two" type="text" formControlName="url"
+                        (keydown.enter)="$event.preventDefault()">
+                    </div>
+                  </div>
+                </div>
+                <div class="gap10"></div>
+                <div class="formfield">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="dark_mode_text" for="secretkey">Upload Page Password:</label>
+                    </div>
+                    <div class="col-md-2">
+                      <input class="form-control text_box_two" type="text" formControlName="secretkey"
+                        (keydown.enter)="$event.preventDefault()">
+                    </div>
+                  </div>
+                </div>
+                <div class="gap10"></div>
+                <div class="formfield">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="dark_mode_text" for="apikey">CloudFlare DNS Api Key:</label>
+                    </div>
+                    <div class="col-md-2">
+                      <input class="form-control text_box_two" type="text" formControlName="apikey"
+                        (keydown.enter)="$event.preventDefault()">
+                    </div>
+                  </div>
+                </div>
+
+              </ng-container>
+              <div class="transBottomFooter">
+                <div class="bottomPartSubmit">
+                  <div class="bottomFooter">
+                    <div class="container">
+                      <button href="javascript:;" class="btnCustomBlack"
+                        [ngClass]="{btnDisable:this.nftSettingsForm.invalid}" type="submit">Save Changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footerFixed" *ngIf="tabSelector == 'performance'">
+        <button class="btnCustomBlack" (click)="taskSetting()" [ngClass]="{'btnDisable': settings == false}">Save
+          changes</button>
+      </div>
+
+      <script>
+        const range = new mdb.Range(document.getElementById('range'));
+      </script>

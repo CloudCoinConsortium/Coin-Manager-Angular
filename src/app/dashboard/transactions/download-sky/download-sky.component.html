@@ -1,0 +1,115 @@
+<div class="transWrapper" *ngIf="!afterClick">
+  <div class="headerbackWrap">
+    <a href="javascript:;" routerLink="/dashboard/home" class="backBtnInHeader"><img src="assets/arrow.svg" alt=""></a>
+    <span class="titleOne">Withdraw CC From {{userSky}}</span>
+  </div>
+  <div class="transBody">
+    <ng-container>
+      <form [formGroup]="exportForm">
+        <div class="formInline">
+          <label>From: </label>
+          <span>{{userSky}}</span>
+        </div>
+        <div class="gap20"></div>
+        <div class="formField">
+          <label for="username">Withdraw To:</label>
+          <div class="customeDropdownTwo" (clickOutside)="closeDropdown()">
+            <div class="triger" (click)="customSelTogglerThree()">
+              <img [src]="cSelectorImgThree" alt="image" *ngIf="cSelectorImgThree != ''">
+              <span>{{cSelectorTextThree}}</span>
+            </div>
+            <div class="menuShowTwo scroll" *ngIf="customSelectorOpenThree">
+              <div class="menus" (click)="customSelectorThree(data.name, 'local')" *ngFor="let data of all">
+                <img src="assets/folder-w-border.svg" alt="icon">
+                <span>{{data.name}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gap10"></div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="formField">
+              <label for="">Amount</label>
+            </div>
+          </div>
+          <div class="col-md-5 dispFlex dispFlexPriceTrans">
+            <div class="inputTagWrapper">
+              <span href="javascript:;" class="inpTag">CC</span>
+              <input type="text" class="form-control" placeholder="0" formControlName="amount" max="1000"
+                (keypress)="_keyUp($event)">
+            </div>
+          </div>
+        </div>
+        <div class="gap20"></div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="gap10"></div>
+            <div class="formField">
+              <label for="">Remarks <small>(optional)</small></label>
+              <input type="text" formControlName="tag" placeholder="Ex: Sending to Antoine">
+            </div>
+            <div *ngIf="isValidInput('tag')">
+              <span class="errorMsg" *ngIf="exportForm.controls['tag'].errors?.maxlength"><img
+                  src="assets/error_info_icon.svg" alt="error icon">Remarks can't be longer than 64
+                characters.</span>
+            </div>
+            <!-- <div class="gap20"></div>
+            <div class="hideimage">
+              <canvas #quoteCanvas width="300" height="300"></canvas>
+            </div> -->
+          </div>
+        </div>
+        <div class="transBottomFooter">
+          <a href="javascript:void(0);" [ngClass]="{'btnDisable': this.exportForm.invalid && this.export == false}"
+            (click)="showLoader ? '' : withdraw()" class="btnCustomBlue">Withdraw CC</a>
+        </div>
+      </form>
+    </ng-container>
+    <ng-container *ngIf="showError">
+      <ng-lottie height="100px" [options]="errorOptions" (animationCreated)="animationCreated($event)"></ng-lottie>
+      <div class="text-center" style="color:#ffffff;margin-bottom: 10px">{{errorMessage}}</div>
+      <div class="text-center">
+        <button class="customBtn" (click)="hideErrorMessage()">
+          <fa-icon icon="arrow-left"></fa-icon>
+        </button>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div class="transWrapper" *ngIf="afterClick">
+  <div class="headerbackWrap">
+    <span class="titleOne">You Withdrew CC {{this.payload.data?.TotalCoins}}!</span>
+  </div>
+  <div class="transBody">
+    <div class="gap10"></div>
+    <div class="formField">
+      <label for="">Withdrawn From: &nbsp; <span style="opacity: 0.7;">{{this.userSky}}</span></label>
+    </div>
+    <div class="formField">
+      <label for="">Withdrawn to: &nbsp; <span style="opacity: 0.7;">{{this.cSelectorTextThree}}</span></label>
+    </div>
+    <div class="formField">
+      <label for="">Current balance of {{this.userSky}}: &nbsp; <span style="opacity: 0.7;">{{transSky}}</span></label>
+    </div>
+    <div class="formField">
+      <label for="">Current balance of {{this.cSelectorTextThree}}: &nbsp; <span
+          style="opacity: 0.7;">{{this.transaction.payload?.balance}}</span></label>
+    </div>
+    <div class="gap20"></div>
+    <div class="transBottomFooter">
+      <a href="javascript:;" class="btnCustomBlue btnLarge" [ngClass]="{btnDisable: showLoader}"
+        (click)="showLoader ? '' : go()">close</a>
+    </div>
+  </div>
+</div>
+
+<div class="onEventLoadWrap" *ngIf="showLoader">
+  <ng-container>
+    <div class="text-center loader_show">
+      <ng-lottie height="150px" [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+      <span style="color:#ffffff">{{loadingMessage}}</span>
+    </div>
+  </ng-container>
+</div>
