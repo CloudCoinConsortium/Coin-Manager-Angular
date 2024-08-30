@@ -109,7 +109,7 @@ export class UploadComponent implements OnInit {
               }],
               tickets: [this.payload.data?.pown_results?.tickets[0]]
             }
-            this.fixfracked(data);
+            // this.fixfracked(data);
           }
         } else {
           this.afterClick = false;

@@ -634,7 +634,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.userLocal = name;
     localStorage.setItem('wallet', 'localwallet')
     this.eventService.setItem('userLocal', name, "changelocal")
-    this.fixFracked()
+    // this.fixFracked()
   }
 
   getSkyDetail(name, id) {
@@ -659,7 +659,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.type === "localwallet") {
       if (Number(localStorage.getItem('localLength')) > 1 && this.transaction.payload?.balance != 0) {
         this.router.navigate(['/dashboard/transactions/transfer']);
-        this.fixFracked();
+        // this.fixFracked();
       } else if (Number(localStorage.getItem('localLength')) < 2) {
         Swal.fire({
           title: 'You can not transfer as there is only one localwallet.',
@@ -1371,7 +1371,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       }
       else {
         this.router.navigate(['/dashboard/transactions/deposit']);
-        this.fixFracked();
+        // this.fixFracked();
       }
     }
 
@@ -1400,7 +1400,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         });
       } else {
         this.router.navigate(['/dashboard/transactions/export']);
-        this.fixFracked();
+        // this.fixFracked();
       }
     } else if (val == "sky_exchange") {
       if (this.skyDetails?.balance == 0 || this.checkerror) {
@@ -1595,10 +1595,9 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
           if (result.value) { }
         });
       } else if (this.transaction.payload?.balance != 0) {
-      }
-      else {
         this.fixModal = !this.fixModal;
       }
+     
     }
     else if (val === 'fixlimbo') {
       if (this.transaction.payload?.balance === 0) {
