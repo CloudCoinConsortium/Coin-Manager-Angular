@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Work\New folder\cloudcoin-ng\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\Users\tabee\OneDrive\Desktop\CoinManager-frontend\Coin-Manager-Angular\src\polyfills.ts */"hN/g");
 
 
 /***/ }),

@@ -16,12 +16,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var src_app_services_event_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/event.service */ "fTLw");
 /* harmony import */ var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/api.service */ "H+bZ");
-/* harmony import */ var src_app_services_login_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/login.service */ "EFyh");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "iInd");
-/* harmony import */ var src_app_services_avaterupdate_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/services/avaterupdate.service */ "ojcs");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "SVse");
-
-
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "iInd");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "SVse");
 
 
 
@@ -148,14 +144,12 @@ function LeftPanelComponent_div_24_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("routerLinkActiveOptions", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](1, _c1));
 } }
 class LeftPanelComponent {
-    constructor(eventService, onlyonce, changeDetectorRef, api, auth, router, emojiService) {
+    constructor(eventService, onlyonce, changeDetectorRef, api, router) {
         this.eventService = eventService;
         this.onlyonce = onlyonce;
         this.changeDetectorRef = changeDetectorRef;
         this.api = api;
-        this.auth = auth;
         this.router = router;
-        this.emojiService = emojiService;
         this.skywallet = null;
         this.showLoader = false;
         this.totalBalance = 0;
@@ -177,10 +171,6 @@ class LeftPanelComponent {
         else if (localStorage.getItem('wallet') == 'nftwallet') {
             this.tabSelector = 'nft';
         }
-        this.cSelectorText = 'Choose Wallet';
-        this.cSelectorTextSky = 'Choose SkyVault';
-        this.customSelectorOpen = false;
-        this.customSelectorOpenSky = false;
         if (localStorage.getItem('themeLightActive') == '1') {
             this.themeLightActive = true;
             this.themeDarkActive = false;
@@ -193,29 +183,8 @@ class LeftPanelComponent {
             this.themeLightActive = true;
             this.themeDarkActive = false;
         }
-        // if (localStorage.getItem('skywallet')) {
-        //   this.skywallet = localStorage.getItem('skywallet');
-        //   this.username = (localStorage.getItem('skywallet')).split(".", 1)[0];
-        // }
-        // if (!localStorage.getItem('imgId')) {
-        //   this.emojiService.getDefaultImage(1).subscribe((response: any) => {
-        //     if (response.success) {
-        //       localStorage.setItem('img_details', JSON.stringify(response));
-        //       this.image = response.img_path;
-        //       localStorage.setItem('imgId', response.image_data.id);
-        //     }
-        //   });
-        // } else {
-        //   let imgpath = JSON.parse(localStorage.getItem('img_details')).img_path;
-        //   this.image = imgpath;
-        // }
     }
     ngOnInit() {
-        // if (this.router.url.toString() == '/dashboard/news') {
-        //   this.getAllwallet();
-        //   this.getList();
-        //   this.getSky();
-        // }\
         this.totalBalance = Number(sessionStorage.getItem('totalBal'));
         this.totalSkyBalance = Number(sessionStorage.getItem('totalSkyBal'));
         this.eventService.watchStorage().subscribe((data) => {
@@ -226,15 +195,9 @@ class LeftPanelComponent {
                     this.getAllwallet();
                 }
             }
-            // else if (data == 'skytransfer'){
-            //   this.totalSkyBalance = 0;
-            //   sessionStorage.setItem('totalSkyBal', '0');
-            //   this.getSky();
-            // }
         });
         this.changeDetectorRef.detectChanges();
         this.eventService.changeLocal.subscribe(message => {
-            //console.log(message);
             if (message[0] != "Empty") {
                 if (message.length == 0) {
                     this.totalBalance = 0;
@@ -254,12 +217,10 @@ class LeftPanelComponent {
                     this.totalSkyBalance = 0;
                     sessionStorage.setItem('totalSkyBal', '0');
                     this.getList();
-                    // this.getSky();
                 }
                 else {
                     this.allSky = message;
                 }
-                //console.log(message);
             }
         });
         this.eventService.changeNft.subscribe(message => {
@@ -309,7 +270,6 @@ class LeftPanelComponent {
                     else {
                         this.eventService.changeLocaldata(this.all);
                     }
-                    // localStorage.setItem('localData', JSON.stringify(this.all));
                     localStorage.setItem('localLength', (_b = this.all) === null || _b === void 0 ? void 0 : _b.length);
                     for (let i = 0; i < this.all.length; i++) {
                         this.totalBalance = this.totalBalance + Number((_c = this.all[i]) === null || _c === void 0 ? void 0 : _c.balance);
@@ -467,7 +427,6 @@ class LeftPanelComponent {
                     name: d
                 };
                 let response = yield this.api.detectsky(data);
-                //console.log(response);
                 if (response.status == "success") {
                     this.onlyonce.setData('leftover');
                     this.detectSkyvault((_a = response.payload) === null || _a === void 0 ? void 0 : _a.id, d, (data) => { });
@@ -482,7 +441,6 @@ class LeftPanelComponent {
         var _a, _b, _c, _d, _e, _f;
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             let task = yield this.api.doCheck(taskID);
-            //console.log("Task done: ", task);
             if (task) {
                 this.payload = task.payload;
                 if (this.payload.status == "error" || this.payload.status == "completed") {
@@ -650,7 +608,6 @@ class LeftPanelComponent {
                 if (response.status === 'success') {
                     var skyDetails = response.payload;
                     if ((skyDetails === null || skyDetails === void 0 ? void 0 : skyDetails.length) !== 0) {
-                        // this.eventService.changeskydata(skyDetails);
                         this.eventService.setItem('userSky', skyDetails[0].name, 'skydelete');
                     }
                     else {
@@ -711,13 +668,6 @@ class LeftPanelComponent {
         this.userLocal = name;
         localStorage.setItem('wallet', 'localwallet');
         this.eventService.setItem('userLocal', name, "changelocal");
-        // this.leftover();
-        // window.location.reload()
-        // window.location.href="/dashboard/home"
-        // let currentUrl = this.router.url;
-        // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-        // this.router.onSameUrlNavigation = 'reload';
-        // this.router.navigate([currentUrl]);
         this.router.navigate(["/dashboard/home"]);
     }
     getSkyDetail(name, id) {
@@ -725,77 +675,10 @@ class LeftPanelComponent {
         localStorage.setItem('wallet', 'skywallet');
         this.eventService.setItem('userSky', name, 'changesky');
         localStorage.setItem('serial', id);
-        // let currentUrl = this.router.url;
-        // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-        // this.router.onSameUrlNavigation = 'reload';
-        // this.router.navigate([currentUrl]);
         this.router.navigate(["/dashboard/home"]);
-        // this.skydetect(name);
     }
     animationCreated(animationItem) {
         console.log(animationItem);
-    }
-    // themeDarkCaller(){
-    //   if (this.themeDarkActive == false) {
-    //     this.themeDarkActive = true;
-    //     this.themeLightActive = false;
-    //     localStorage.setItem('themeLightActive','0');
-    //     this.eventService.emitThemeTogEvent();
-    //   }
-    // }
-    // themeLightCaller(){
-    //   if (this.themeLightActive == false) {
-    //     this.themeLightActive = true;
-    //     this.themeDarkActive = false;
-    //     localStorage.setItem('themeLightActive','1');
-    //     this.eventService.emitThemeTogEvent();
-    //   }
-    // }
-    // logout(): void
-    // {
-    //   if (confirm('Are you sure you want to log out ?'))
-    //   {
-    //     localStorage.setItem('cc', 'null');
-    //     localStorage.removeItem('cc');
-    //     this.auth.checkLoginStatus();
-    //     this.router.navigate(['/welcome']);
-    //   }
-    //   Swal.fire({
-    //     title: 'Are you sure you want to log out?',
-    //     icon: 'warning',
-    //     showCancelButton: true,
-    //     confirmButtonText: 'Yes',
-    //     cancelButtonText: 'No'
-    //   }).then((result) => {
-    //     if (result.value) {
-    //       {
-    //         var myItem = localStorage.getItem('themeLightActive');
-    //         localStorage.clear();
-    //         localStorage.setItem('themeLightActive',myItem);
-    //         this.auth.checkLoginStatus();
-    //         this.router.navigate(['/login']);
-    //       }
-    //     }
-    //   });
-    // }
-    customSelector(val, type) {
-        this.destName = val;
-        if (type == 'local') {
-            this.cSelectorText = val;
-            this.customSelectorOpen = false;
-            this.getWalletDetail(this.cSelectorText);
-        }
-        else if (type == 'sky') {
-            this.cSelectorTextSky = val;
-            this.customSelectorOpenSky = false;
-            this.getSkyDetail(this.cSelectorTextSky, 'serial');
-        }
-    }
-    customSelToggler(val) {
-        this.customSelectorOpen = !this.customSelectorOpen;
-    }
-    customSelTogglerSky(val) {
-        this.customSelectorOpenSky = !this.customSelectorOpenSky;
     }
     tabToggler(val) {
         this.tabSelector = val;
@@ -814,8 +697,8 @@ class LeftPanelComponent {
         this.router.navigate(["/dashboard/create-nft-gallery"]);
     }
 }
-LeftPanelComponent.ɵfac = function LeftPanelComponent_Factory(t) { return new (t || LeftPanelComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__["DataService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_login_service__WEBPACK_IMPORTED_MODULE_5__["LoginService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_avaterupdate_service__WEBPACK_IMPORTED_MODULE_7__["AvaterupdateService"])); };
-LeftPanelComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: LeftPanelComponent, selectors: [["app-left-panel"]], decls: 25, vars: 7, consts: [[1, "leftPanelHolder"], [1, "leftPlogoWrap"], ["src", "assets/logo_new_only_cc.svg", "alt", "", 1, "lpLogoImg"], [1, "lpBodyWrap"], [1, "lpBodyTop"], [1, "lpuserName"], [1, "totBlncText"], [1, "totBlncVal"], [1, "walletInfoOuter"], [1, "walletInfoWrapper", "walletInfoLocal"], [1, "walletInfoHolder"], [1, "tab-item", 3, "ngClass", "click"], [1, "tab-item", "mr-auto", 3, "ngClass", "click"], [1, "tabBody"], [4, "ngIf"], ["class", "", 4, "ngFor", "ngForOf"], [1, "wltInfoLeft"], ["href", "javascript:;", "routerLink", "/dashboard/create-localwallet-dash", 1, "addWallet", 3, "click"], ["src", "assets/add_circle_img.svg", "alt", "add circle"], [1, ""], [1, "walletAcntHolder", 2, "cursor", "pointer", 3, "ngClass", "click"], ["src", "assets/1093522-200.png", "alt", "localwallet icon", 1, "wallet-icon", "mr-3"], [1, "acntVal", "mr-auto"], [1, "acntVal"], ["href", "javascript:;", "routerLink", "/dashboard/create-skyvault-dash", 1, "addWallet", 3, "click"], ["src", "assets/skywallet-cloud-white.svg", "alt", "skyvault img", 1, "mr-3"], [1, "acntHoldName", "mr-auto"], [1, "lpBottomPart"], ["href", "javascript:;", "routerLink", "/dashboard/create-nft-gallery", "routerLinkActive", "active", 1, "bottomLink", 3, "routerLinkActiveOptions", "click"], ["src", "assets/nft.png", "alt", "settings", 2, "margin-left", "-10px"]], template: function LeftPanelComponent_Template(rf, ctx) { if (rf & 1) {
+LeftPanelComponent.ɵfac = function LeftPanelComponent_Factory(t) { return new (t || LeftPanelComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__["DataService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"])); };
+LeftPanelComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: LeftPanelComponent, selectors: [["app-left-panel"]], decls: 25, vars: 7, consts: [[1, "leftPanelHolder"], [1, "leftPlogoWrap"], ["src", "assets/logo_new_only_cc.svg", "alt", "", 1, "lpLogoImg"], [1, "lpBodyWrap"], [1, "lpBodyTop"], [1, "lpuserName"], [1, "totBlncText"], [1, "totBlncVal"], [1, "walletInfoOuter"], [1, "walletInfoWrapper", "walletInfoLocal"], [1, "walletInfoHolder"], [1, "tab-item", 3, "ngClass", "click"], [1, "tab-item", "mr-auto", 3, "ngClass", "click"], [1, "tabBody"], [4, "ngIf"], ["class", "", 4, "ngFor", "ngForOf"], [1, "wltInfoLeft"], ["href", "javascript:;", "routerLink", "/dashboard/create-localwallet-dash", 1, "addWallet", 3, "click"], ["src", "assets/add_circle_img.svg", "alt", "add circle"], [1, ""], [1, "walletAcntHolder", 2, "cursor", "pointer", 3, "ngClass", "click"], ["src", "assets/1093522-200.png", "alt", "localwallet icon", 1, "wallet-icon", "mr-3"], [1, "acntVal", "mr-auto"], [1, "acntVal"], ["href", "javascript:;", "routerLink", "/dashboard/create-skyvault-dash", 1, "addWallet", 3, "click"], ["src", "assets/skywallet-cloud-white.svg", "alt", "skyvault img", 1, "mr-3"], [1, "acntHoldName", "mr-auto"], [1, "lpBottomPart"], ["href", "javascript:;", "routerLink", "/dashboard/create-nft-gallery", "routerLinkActive", "active", 1, "bottomLink", 3, "routerLinkActiveOptions", "click"], ["src", "assets/nft.png", "alt", "settings"]], template: function LeftPanelComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "img", 2);
@@ -874,7 +757,7 @@ LeftPanelComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.tabSelector == "skyvault");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.tabSelector == "nft");
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgForOf"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterLinkActive"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJsZWZ0LXBhbmVsLmNvbXBvbmVudC5zY3NzIn0= */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterLinkActive"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJsZWZ0LXBhbmVsLmNvbXBvbmVudC5zY3NzIn0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](LeftPanelComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
         args: [{
@@ -882,7 +765,7 @@ LeftPanelComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefin
                 templateUrl: './left-panel.component.html',
                 styleUrls: ['./left-panel.component.scss']
             }]
-    }], function () { return [{ type: src_app_services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"] }, { type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__["DataService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"] }, { type: src_app_services_login_service__WEBPACK_IMPORTED_MODULE_5__["LoginService"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] }, { type: src_app_services_avaterupdate_service__WEBPACK_IMPORTED_MODULE_7__["AvaterupdateService"] }]; }, null); })();
+    }], function () { return [{ type: src_app_services_event_service__WEBPACK_IMPORTED_MODULE_3__["EventService"] }, { type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__["DataService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }]; }, null); })();
 
 
 /***/ }),
@@ -1148,73 +1031,6 @@ DashboardModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineIn
                 ]
             }]
     }], null, null); })();
-
-
-/***/ }),
-
-/***/ "ojcs":
-/*!**************************************************!*\
-  !*** ./src/app/services/avaterupdate.service.ts ***!
-  \**************************************************/
-/*! exports provided: AvaterupdateService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AvaterupdateService", function() { return AvaterupdateService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "IheW");
-
-
-
-class AvaterupdateService {
-    constructor(http) {
-        this.http = http;
-        this.objectList = [
-            "face",
-            "dimpal",
-            "fracal",
-            "earring",
-            "eyeshadow",
-            "eyeball",
-            "eye",
-            "eyebrow",
-            "eyebrow_colour",
-            "glass",
-            "hair",
-            "hair_colour",
-            "hat_hair",
-            "facial_hair",
-            "facial_hair_colour",
-            "mouth",
-            "mouthColor",
-            "nose"
-        ];
-        this.apiUrl = "https://www.bigbadmoji.com/api/";
-    }
-    getDefaultImage(data) {
-        return this.http.get(this.apiUrl + "get-only-default-face?gender=" + data);
-    }
-    getListOfObject(data) {
-        let objectname = data.object;
-        let imgId = localStorage.getItem('imgId');
-        return this.http.get(this.apiUrl + "get-only-face-option?generated_image_id=" + imgId + "&object=" + objectname);
-    }
-    getAndSetNewAvaterImg(data) {
-        let objectname = data.object;
-        let imgId = localStorage.getItem('imgId');
-        let objectId = data.objectId;
-        return this.http.get(this.apiUrl + "set-only-face-option?generated_image_id=" + imgId + "&object=" + objectname + "&object_id=" + objectId);
-    }
-}
-AvaterupdateService.ɵfac = function AvaterupdateService_Factory(t) { return new (t || AvaterupdateService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
-AvaterupdateService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: AvaterupdateService, factory: AvaterupdateService.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AvaterupdateService, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
 
 
 /***/ })

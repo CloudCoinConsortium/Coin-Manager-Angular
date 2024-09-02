@@ -28,14 +28,6 @@ const routes = [
                 loadChildren: () => __webpack_require__.e(/*! import() | create-name-create-name-module */ "create-name-create-name-module").then(__webpack_require__.bind(null, /*! ./create-name/create-name.module */ "iS89")).then(m => m.CreateNameModule)
             },
             {
-                path: 'local-setup-mail-psw',
-                loadChildren: () => Promise.all(/*! import() | setup-mail-psw-setup-mail-psw-module */[__webpack_require__.e("common"), __webpack_require__.e("setup-mail-psw-setup-mail-psw-module")]).then(__webpack_require__.bind(null, /*! ./setup-mail-psw/setup-mail-psw.module */ "1ojn")).then(m => m.SetupMailPswModule)
-            },
-            {
-                path: 'uplaod-local-cc',
-                loadChildren: () => __webpack_require__.e(/*! import() | upload-local-cc-upload-local-cc-module */ "upload-local-cc-upload-local-cc-module").then(__webpack_require__.bind(null, /*! ./upload-local-cc/upload-local-cc.module */ "Zejw")).then(m => m.UploadLocalCcModule)
-            },
-            {
                 path: 'localstep-completed',
                 loadChildren: () => __webpack_require__.e(/*! import() | local-step-complete-local-step-complete-module */ "local-step-complete-local-step-complete-module").then(__webpack_require__.bind(null, /*! ./local-step-complete/local-step-complete.module */ "GkWt")).then(m => m.LocalStepCompleteModule)
             }

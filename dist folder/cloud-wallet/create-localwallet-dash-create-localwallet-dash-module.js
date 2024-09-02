@@ -70,14 +70,6 @@ const routes = [
                 loadChildren: () => __webpack_require__.e(/*! import() | local-name-local-name-module */ "local-name-local-name-module").then(__webpack_require__.bind(null, /*! ./local-name/local-name.module */ "viZN")).then(m => m.LocalNameModule)
             },
             {
-                path: 'setup-mail',
-                loadChildren: () => Promise.all(/*! import() | setup-email-setup-email-module */[__webpack_require__.e("common"), __webpack_require__.e("setup-email-setup-email-module")]).then(__webpack_require__.bind(null, /*! ./setup-email/setup-email.module */ "4bp0")).then(m => m.SetupEmailModule)
-            },
-            {
-                path: 'upload-cc',
-                loadChildren: () => __webpack_require__.e(/*! import() | upload-cc-upload-cc-module */ "upload-cc-upload-cc-module").then(__webpack_require__.bind(null, /*! ./upload-cc/upload-cc.module */ "P1SM")).then(m => m.UploadCcModule)
-            },
-            {
                 path: 'completed',
                 loadChildren: () => __webpack_require__.e(/*! import() | local-completed-local-completed-module */ "local-completed-local-completed-module").then(__webpack_require__.bind(null, /*! ./local-completed/local-completed.module */ "ZMqe")).then(m => m.LocalCompletedModule)
             }

@@ -217,7 +217,6 @@ class BackupComponent {
     constructor(api) {
         this.api = api;
         this.afterclick = false;
-        this.backupExtPswShow = true;
         this.file = "";
         this.showLoader = false;
         this.options = {
@@ -228,9 +227,6 @@ class BackupComponent {
         this.userLocal = localStorage.getItem('userLocal');
     }
     ngOnInit() {
-    }
-    toggleBkpPswType() {
-        this.backupExtPswShow = !this.backupExtPswShow;
     }
     backup() {
         var _a, _b;
@@ -312,15 +308,6 @@ class BackupComponent {
                     var name = document.getElementById('fileInput');
                     name.placeholder = (_b = response === null || response === void 0 ? void 0 : response.payload) === null || _b === void 0 ? void 0 : _b.items_picked[0];
                 }
-                // else {
-                //   Swal.fire({
-                //     title: response?.payload?.message,
-                //     icon: 'error',
-                //     confirmButtonText: 'Okay',
-                //   }).then((result) => {
-                //     if (result.value) { { } }
-                //   });
-                // }
             }
             catch (e) {
                 console.log(e);
@@ -370,12 +357,10 @@ class BackupComponent {
         console.log(animationItem);
     }
     getLength() {
-        // alert("length")
-        console.log("tag :" + this.tag.length);
         if (this.tag.length > 64) {
             this.remarkInvalid = true;
             sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
-                title: "File Name Tag can not be longer than 64characters",
+                title: "File Name Tag can not be longer than 64 characters",
                 icon: 'info',
                 confirmButtonText: 'Okay'
             });

@@ -387,13 +387,6 @@ class FixComponent {
             }
         });
     }
-    // getColor(bal: any){
-    //   if(bal === 1 || bal > 1){
-    //     return 'green';
-    //   }else if( bal === 0){
-    //     return 'red';
-    //   }
-    // }
     detectSkyvault(taskID, xdata) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             let task = yield this.api.doCheck(taskID);

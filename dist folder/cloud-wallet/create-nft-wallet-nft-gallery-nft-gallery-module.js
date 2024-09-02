@@ -82,13 +82,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/api.service */ "H+bZ");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "cUpR");
-/* harmony import */ var src_app_services_event_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/event.service */ "fTLw");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "iInd");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ "SVse");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "G0yt");
-/* harmony import */ var ng_click_outside__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ng-click-outside */ "Hicy");
-/* harmony import */ var ngx_lottie__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-lottie */ "NiZn");
-
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "iInd");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "SVse");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "G0yt");
+/* harmony import */ var ng_click_outside__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-click-outside */ "Hicy");
+/* harmony import */ var ngx_lottie__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-lottie */ "NiZn");
 
 
 
@@ -606,10 +604,9 @@ function NftGalleryComponent_div_22_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r7.showLoader);
 } }
 class NftGalleryComponent {
-    constructor(api, sanitizer, storage, router) {
+    constructor(api, sanitizer, router) {
         this.api = api;
         this.sanitizer = sanitizer;
-        this.storage = storage;
         this.router = router;
         this.passkeyImage = "";
         this.img = [];
@@ -623,36 +620,28 @@ class NftGalleryComponent {
         this.sn_arr = [];
         this.sn_arr_all = [];
         this.healthModal = false;
-        this.syncTitle = [];
         this.titlesToSync = [];
         this.dnsToSync = [];
         this.showLoader = false;
         this.loadingMessage = '';
-        this.options = {
-            path: 'https://raida11.cloudcoin.global/animation/cloud_loading.json',
-        };
         this.merged = [];
         this.file = 'Select path';
-        this.gallery = [];
+        this.count = 0;
         this.nft_gallery = [{
                 nft_sn: 0,
                 nft_image: ""
             }];
-        this.count = 0;
-        this.imgArray = new Array();
+        this.options = {
+            path: 'https://raida11.cloudcoin.global/animation/cloud_loading.json',
+        };
         this.nftDetails = true;
         this.modalOpen = false;
         this.modalOpen2 = false;
-        // this.hasaccepted = false;
     }
     ngOnInit() {
         this.userLocal = localStorage.getItem('userLocal');
         if (localStorage.getItem('withdraw_path') != "" && localStorage.getItem('withdraw_path') != null && localStorage.getItem('withdraw_path') != undefined) {
             this.file = localStorage.getItem('withdraw_path');
-            console.log("bye");
-        }
-        else {
-            console.log("hye");
         }
         this.getNftByGroups();
         this.getBalance();
@@ -662,9 +651,7 @@ class NftGalleryComponent {
             try {
                 let response = yield this.api.nftGroups();
                 if (response.status === "success") {
-                    console.log(response);
                     let data = response.payload;
-                    console.log(data.length);
                     for (let i = 0; i < data.length; i++) {
                         let png = data[i].PNG;
                         this.title1[i] = data[i].title;
@@ -693,8 +680,6 @@ class NftGalleryComponent {
         var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             this.modalOpen = !this.modalOpen;
-            // this.hasaccepted = true;
-            // this.selectImgs(this.sn_detail , this.title_detail , this.dname_detail, true);
             try {
                 var data;
                 if (snvalue.length > 1) {
@@ -709,7 +694,6 @@ class NftGalleryComponent {
                     for (let i = 0; i < snvalue.length; i++) {
                         let response = yield this.api.displayDetails(snvalue[i]);
                         if (response.status === "success") {
-                            //console.log(response);
                             this.title_detail = (_a = response.payload) === null || _a === void 0 ? void 0 : _a.hostname;
                             this.desc_detail = (_b = response.payload) === null || _b === void 0 ? void 0 : _b.description;
                             this.sn_detail = (_c = response.payload) === null || _c === void 0 ? void 0 : _c.sn;
@@ -725,16 +709,9 @@ class NftGalleryComponent {
                             this.img_detail[i] = this.sanitizer.bypassSecurityTrustResourceUrl(this.blob);
                             this.nft_gallery.push({ nft_image: this.img_detail[i], nft_sn: this.sn_detail });
                             var count = Object.keys(this.nft_gallery).length;
-                            //console.log("count:" + count)
                         }
                     }
                     var dup_array = this.nft_gallery.splice(0, 1);
-                    // console.log("removed item:" + dup_array)
-                    // for (let i = 0; i < count; i++) {
-                    //   let item = this.nft_gallery[i]
-                    //   console.log("final gallery:" + item['nft_image'])
-                    //   console.log("final gallery:" + item['nft_sn'])
-                    // }
                 }
                 else {
                     data = snvalue;
@@ -746,7 +723,6 @@ class NftGalleryComponent {
                         }];
                     let response = yield this.api.displayDetails(data);
                     if (response.status === "success") {
-                        console.log(response);
                         this.title_detail = (_f = response.payload) === null || _f === void 0 ? void 0 : _f.hostname;
                         this.desc_detail = (_g = response.payload) === null || _g === void 0 ? void 0 : _g.description;
                         this.sn_detail = (_h = response.payload) === null || _h === void 0 ? void 0 : _h.sn;
@@ -759,20 +735,11 @@ class NftGalleryComponent {
                         var link = document.createElement('a');
                         link.href = downloadURL;
                         this.blob = link.href;
-                        //console.log("image:" + this.blob)
                         this.img_detail[0] = this.sanitizer.bypassSecurityTrustResourceUrl(this.blob);
-                        //console.log("image:" + this.img_detail)
                         this.nft_gallery.push({ nft_image: this.blob, nft_sn: this.sn_detail });
                     }
                     var dup_array = this.nft_gallery.splice(0, 1);
-                    //console.log("removed item:" + dup_array)
                     var count = Object.keys(this.nft_gallery).length;
-                    console.log("count:" + count);
-                    for (let i = 0; i < count; i++) {
-                        let item = this.nft_gallery[i];
-                        console.log("final gallery:" + item['nft_image']);
-                        console.log("final gallery:" + item['nft_sn']);
-                    }
                 }
             }
             catch (e) {
@@ -786,11 +753,8 @@ class NftGalleryComponent {
             try {
                 var data = this.sn_detail;
                 let response = yield this.api.checkPngValidity(data);
-                // console.log(data);
-                console.log("test:" + this.sn_detail);
                 if (response.status === "success") {
                     this.verifiedPng = (_a = response.payload) === null || _a === void 0 ? void 0 : _a.Data;
-                    console.log("validity :" + this.verifiedPng);
                     this.passkeyImage = yield fetch(`data:image/png;base64,${this.verifiedPng}`);
                     const blobs = yield this.passkeyImage.blob();
                     const newBlob = new Blob([blobs], { type: 'image/png' });
@@ -823,11 +787,9 @@ class NftGalleryComponent {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
                 let response = yield this.api.filePick();
-                console.log(response);
                 if (response.status === "success") {
                     this.file = (_a = response === null || response === void 0 ? void 0 : response.payload) === null || _a === void 0 ? void 0 : _a.items_picked[0];
                     localStorage.setItem('withdraw_path', this.file);
-                    console.log(this.file);
                 }
             }
             catch (e) {
@@ -847,7 +809,6 @@ class NftGalleryComponent {
                     sns: this.sn_arr
                 };
                 let response = yield this.api.exportSNs(data);
-                console.log(data);
                 if (response.status === "success") {
                     this.doCheck12((_a = response.payload) === null || _a === void 0 ? void 0 : _a.id, (data) => {
                     });
@@ -873,7 +834,6 @@ class NftGalleryComponent {
                         }).then((result) => {
                             if (result.value) { }
                         });
-                        console.log("yay! process completed");
                     }
                     return;
                 }
@@ -886,29 +846,16 @@ class NftGalleryComponent {
     selectImgs(snvalue, titlevalue, dnvalue, isChecked) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
-                //alert(isChecked)
                 if (isChecked) {
                     this.merged = this.merged.concat(snvalue);
                     this.titlesToSync = this.titlesToSync.concat(titlevalue);
                     this.dnsToSync = this.dnsToSync.concat(dnvalue);
-                    //console.log("merged:" + this.merged)
-                    //this.titlesToSync.push(titlevalue)
-                    //this.dnsToSync.push(dnvalue)
                     this.sn_arr = this.merged;
-                    for (let i = 0; i < this.sn_arr.length; i++) {
-                        //console.log("if :" + this.sn_arr)
-                        //console.log('synctitle:' + this.titlesToSync)
-                        //console.log('synctitle:' + this.titlesToSync)
-                    }
                 }
                 else {
-                    //console.log("snarray :" + snvalue)
                     this.sn_arr.forEach((item, index) => {
                         if (snvalue == item)
                             this.sn_arr.splice(index, 1);
-                        // console.log("snvalue:" + snvalue)
-                        // console.log("item to be removed:" + item)
-                        // console.log("snarray in else:" + this.sn_arr)
                     });
                     this.titlesToSync.forEach((item, index) => {
                         if (titlevalue == item)
@@ -918,11 +865,6 @@ class NftGalleryComponent {
                         if (dnvalue == item)
                             this.dnsToSync.splice(index, 1);
                     });
-                }
-                for (let i = 0; i < this.sn_arr.length; i++) {
-                    console.log("final title:" + this.titlesToSync);
-                    console.log("final:" + this.sn_arr);
-                    console.log("final dname:" + this.dnsToSync);
                 }
             }
             catch (e) {
@@ -939,7 +881,6 @@ class NftGalleryComponent {
                 this.transaction = (_a = response.payload) === null || _a === void 0 ? void 0 : _a.balance;
                 this.frackedcount = (_b = response.payload) === null || _b === void 0 ? void 0 : _b.fracked_count;
                 this.limbocount = (_c = response.payload) === null || _c === void 0 ? void 0 : _c.limbo_count;
-                console.log("balance:" + response);
             }
             catch (e) {
                 console.log(e);
@@ -999,18 +940,12 @@ class NftGalleryComponent {
                     });
                     return;
                 }
-                console.log("data from recycle:" + this.sn_arr);
-                //var data = this.sn_arr;
                 var name = this.userLocal;
                 if (this.sn_arr.length > 0) {
                     for (let i = 0; i <= this.sn_arr.length; i++) {
                         this.data = this.sn_arr[i];
-                        // alert("sn.arr" + this.sn_arr[i])
-                        console.log("snarr recycle:" + this.data);
                         let response = yield this.api.deleteNfts(this.data, name);
-                        // console.log(data);
                         if (response.status === "success") {
-                            console.log("recycle call :" + response);
                             sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
                                 title: "Your NFTs have been successfully turned into coins and your coins have been moved to" + " " + this.userLocal,
                                 icon: 'success',
@@ -1054,9 +989,7 @@ class NftGalleryComponent {
                         nft_name: "NFTs",
                     };
                     this.response = yield this.api.syncNft(data);
-                    console.log(data);
                     if (this.response.status === "success") {
-                        console.log('wohoo! it works.');
                         this.showLoading(false);
                         sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
                             title: "Successfully synced NFTs",
@@ -1069,11 +1002,9 @@ class NftGalleryComponent {
                     else {
                         this.showLoading(false);
                         this.count = this.count + 1;
-                        // this.title = this.response.payload.message
                     }
                 }
                 if (this.count >= 1) {
-                    console.log(this.count);
                     sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
                         title: this.response.payload.message,
                         icon: 'error',
@@ -1088,7 +1019,6 @@ class NftGalleryComponent {
                 return;
             }
             catch (e) {
-                // this.showLoader = false;
                 console.log(e);
             }
             setTimeout(() => {
@@ -1106,12 +1036,9 @@ class NftGalleryComponent {
             try {
                 var data = this.sn_detail;
                 let response = yield this.api.checkPngValidity(data);
-                // console.log(data);
-                console.log("test:" + this.sn_detail);
                 this.condition = response.status;
                 if (response.status === "success") {
                     this.verifiedPng = (_a = response.payload) === null || _a === void 0 ? void 0 : _a.Data;
-                    console.log("validity :" + this.verifiedPng);
                     this.passkeyImage = yield fetch(`data:image/png;base64,${this.verifiedPng}`);
                     const blobs = yield this.passkeyImage.blob();
                     const newBlob = new Blob([blobs], { type: 'image/png' });
@@ -1127,9 +1054,6 @@ class NftGalleryComponent {
                         title: (_b = response.payload) === null || _b === void 0 ? void 0 : _b.message,
                         icon: 'error',
                         confirmButtonText: 'Okay',
-                    }).then((result) => {
-                        if (result.value) {
-                        }
                     });
                 }
             }
@@ -1143,8 +1067,6 @@ class NftGalleryComponent {
             try {
                 var data = this.sn_detail;
                 let response = yield this.api.checkDescValidity(data);
-                // console.log(data);
-                console.log("test:" + this.sn_detail);
                 if (response.status === "success") {
                     this.verifiedDesc = response.payload;
                     this.confirmUnique();
@@ -1161,11 +1083,8 @@ class NftGalleryComponent {
             try {
                 var data = this.sn_detail;
                 let response = yield this.api.checkUniqueValidity(data);
-                // console.log(data);
-                console.log("test:" + this.sn_detail);
                 if (response.status === "success") {
                     this.verifiedSn = (_a = response.payload) === null || _a === void 0 ? void 0 : _a.Data[0].Sn;
-                    console.log(this.verifiedSn);
                 }
             }
             catch (e) {
@@ -1185,9 +1104,6 @@ class NftGalleryComponent {
     modalToggler() {
         this.modalOpen = !this.modalOpen;
         this.nftDetails = true;
-    }
-    modalToggler2() {
-        this.modalOpen2 = !this.modalOpen2;
     }
     showLoading(state) {
         this.loadingMessage = '';
@@ -1212,13 +1128,12 @@ class NftGalleryComponent {
     MintToExisting() {
         this.title_name = this.title_detail;
         this.domain_name = this.dname_detail;
-        console.log("tab" + this.title_name);
         if (this.title_name != '') {
             this.router.navigate(['/dashboard/existing-nft'], { queryParams: { title_name: this.title_name, domain_name: this.domain_name, snvalue: this.sn_detail } });
         }
     }
 }
-NftGalleryComponent.ɵfac = function NftGalleryComponent_Factory(t) { return new (t || NftGalleryComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_event_service__WEBPACK_IMPORTED_MODULE_5__["EventService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"])); };
+NftGalleryComponent.ɵfac = function NftGalleryComponent_Factory(t) { return new (t || NftGalleryComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"])); };
 NftGalleryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: NftGalleryComponent, selectors: [["app-nft-gallery"]], decls: 23, vars: 8, consts: [[1, "nftGalleryWrap"], [1, "nftGalHeadWrap"], [1, "headerbackWrap"], ["src", "assets/nft.png", "alt", "localwallet icon", 1, "nft-icon", "mr-3"], [1, "titleOne"], [1, "btnFlexWrap"], ["href", "javascript:;", 1, "btnCustomBlue", 3, "click"], ["href", "javascript:;", 1, "btnCustomWhite", 3, "click"], ["href", "javascript:;", "class", "btnCustomBlue", 3, "click", 4, "ngIf"], [1, "zoom-in"], [1, "row"], ["class", "p-2", 4, "ngFor", "ngForOf"], ["class", "modalContainer", 4, "ngIf"], ["class", "modalContainer1", 4, "ngIf"], [1, "p-2"], [1, "nftsHolder", "checked"], ["alt", "Image Source", "data-toggle", "tooltip", "tooltipClass", "my-custom-class", "data-placement", "top", 1, "nfts", 3, "src", "ngbTooltip", "click"], [1, "modalContainer"], [1, "modalOverlay", 3, "click"], [1, "modalWrap", "modalMedium"], [1, "modalHeader"], [1, "modalClose", 3, "click"], ["src", "assets/close-white.svg", "alt", "icon"], [1, "modalBody"], [1, "gap20"], [1, "sectionOne"], [1, "modalSubhed"], [1, "gap50"], [1, "modalFooter"], [1, "buttonWrap"], ["routerLink", "/dashboard/functions/nft-health", 1, "btnCustomBlue", "buttonWide"], ["routerLink", "/dashboard/functions/fix-nft", 1, "btnCustomBlue", "buttonWide"], ["routerLink", "/dashboard/functions/fix-nft-limbo", 1, "btnCustomBlue", "buttonWide"], [1, "ml-auto", "customdropDownHolder", 3, "clickOutside"], [1, "textWithIcon"], ["src", "assets/caret-down.svg", "alt", "", 1, "imgInBtn"], ["class", "dropDownBox", 4, "ngIf"], [4, "ngIf"], [1, "dropDownBox"], ["href", "javascript:;", 3, "click"], [1, "gap10"], [1, "modalDesc"], [1, "modalSmDesc"], [1, "nftsHolder", "nftMainImgHolder", "checked"], [1, "customCheckboxWrap"], ["type", "checkbox", 1, "memCheck", 3, "change"], [1, "checkmarkCheck"], ["alt", "Image Source", 1, "nftMainImg", 3, "src"], [1, "nftsHolderSm", "checked"], ["alt", "Image Source", 2, "width", "auto", "height", "200px", "padding-left", "5px", 3, "src"], [1, "dark_mode_text"], [1, "authenticity_wrap"], [1, "auth_left_panel"], [1, "auth_right_panel"], [1, "nftMainImgHolder"], ["alt", "", 1, "nftMainImg", "nftMainImgSm", 3, "src"], ["class", "col-lg-3 col-md-3 col-6 p-1 m-2", 4, "ngFor", "ngForOf"], [1, "col-lg-3", "col-md-3", "col-6", "p-1", "m-2"], [1, "nftsHolder"], ["alt", "Image Source", 2, "width", "100%", "height", "100%", "padding-left", "5px", 3, "src"], [2, "padding", "20px", "font-size", "10px"], [1, "btnCustomWhite", 3, "click"], [1, "btnCustomBlue", 3, "click"], [1, "btnCustomBlue", "m-2", 3, "click"], [1, "modalContainer1"], [1, "modalOverlay1", 3, "click"], [1, "formField"], [1, "col-md-4"], ["for", "username"], [1, "col-md-2"], [1, "filepicker"], [1, "icon_wrap", 3, "click"], ["src", "assets/folder_icon.svg", "alt", "", 1, "folderIcon"], [1, "btnCustomBlue", "buttonWide", 3, "click"], ["class", "onEventLoadWrap", 4, "ngIf"], [1, "onEventLoadWrap"], [1, "text-center", "loader_show"], ["height", "150px", 3, "options", "animationCreated"], [2, "color", "#ffffff"]], template: function NftGalleryComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
@@ -1273,7 +1188,7 @@ NftGalleryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefi
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.modalOpen);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.WithdrawModal);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbTooltip"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterLink"], ng_click_outside__WEBPACK_IMPORTED_MODULE_9__["ClickOutsideDirective"], ngx_lottie__WEBPACK_IMPORTED_MODULE_10__["LottieComponent"]], styles: [".container[_ngcontent-%COMP%] {\n  margin-top: 5%;\n  margin-right: 2%;\n  margin-left: 5%;\n}\n\n.nft-icon[_ngcontent-%COMP%] {\n  height: 40px;\n  width: 40px;\n}\n\n.nftGalleryWrap[_ngcontent-%COMP%]   .btnFlexWrap[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  margin-bottom: 30px;\n}\n\n@media (max-width: 576px) {\n  .nftGalleryWrap[_ngcontent-%COMP%]   .btnFlexWrap[_ngcontent-%COMP%] {\n    flex-wrap: wrap;\n    margin-top: 30px;\n    margin-bottom: 10px;\n  }\n}\n\n.nftGalleryWrap[_ngcontent-%COMP%]   .btnFlexWrap[_ngcontent-%COMP%]   a[_ngcontent-%COMP%], .nftGalleryWrap[_ngcontent-%COMP%]   .btnFlexWrap[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  margin-right: 15px;\n}\n\n@media (max-width: 576px) {\n  .nftGalleryWrap[_ngcontent-%COMP%]   .btnFlexWrap[_ngcontent-%COMP%]   a[_ngcontent-%COMP%], .nftGalleryWrap[_ngcontent-%COMP%]   .btnFlexWrap[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n    margin-right: 5px;\n    margin-bottom: 5px;\n  }\n}\n\n.nftsHolder[_ngcontent-%COMP%] {\n  background-color: #fff;\n  margin-bottom: 0.1rem;\n  position: relative;\n  cursor: pointer;\n}\n\n.nftsHolder[_ngcontent-%COMP%]:hover   .customCheckboxWrap[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n\n.nftsHolder.checked[_ngcontent-%COMP%]   .customCheckboxWrap[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n\n.nftsHolder[_ngcontent-%COMP%]   .customCheckboxWrap[_ngcontent-%COMP%] {\n  position: absolute;\n  right: 0px;\n  top: 7px;\n  opacity: 0;\n  transition: all 0.1s ease;\n}\n\n.nftsHolderSm[_ngcontent-%COMP%] {\n  background-color: #fff;\n  margin-bottom: 0.1rem;\n  position: relative;\n  cursor: pointer;\n}\n\n.nftsHolderSm[_ngcontent-%COMP%]:hover   .customCheckboxWrap[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n\n.nftsHolderSm.checked[_ngcontent-%COMP%]   .customCheckboxWrap[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n\n.nftsHolderSm[_ngcontent-%COMP%]   .customCheckboxWrap[_ngcontent-%COMP%] {\n  position: absolute;\n  right: 0;\n  top: 7px;\n  opacity: 0;\n  transition: all 0.1s ease;\n}\n\n.nftsHolderSm[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  display: block;\n  text-align: center;\n  font-size: 16px;\n  color: gray;\n}\n\n.nfts[_ngcontent-%COMP%] {\n  width: auto;\n  height: 150px;\n  background-size: cover;\n}\n\n.nftMainImgHolder[_ngcontent-%COMP%] {\n  background-color: #fff;\n  margin-bottom: 0.1rem;\n}\n\n.nftMainImgHolder[_ngcontent-%COMP%]   .nftMainImg[_ngcontent-%COMP%] {\n  height: 300px;\n}\n\n@media (max-width: 576px) {\n  .nftMainImgHolder[_ngcontent-%COMP%]   .nftMainImg[_ngcontent-%COMP%] {\n    height: 300px;\n  }\n}\n\n.nftMainImgHolder[_ngcontent-%COMP%]   .nftMainImgSm[_ngcontent-%COMP%] {\n  height: 250px;\n}\n\n@media (max-width: 576px) {\n  .nftMainImgHolder[_ngcontent-%COMP%]   .nftMainImgSm[_ngcontent-%COMP%] {\n    height: 140px;\n  }\n}\n\n.authenticity_wrap[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: flex-start;\n  margin-left: -10px;\n  margin-right: -10px;\n}\n\n@media screen and (max-width: 576px) {\n  .authenticity_wrap[_ngcontent-%COMP%] {\n    margin-left: -5px;\n    margin-right: -5px;\n  }\n}\n\n.authenticity_wrap[_ngcontent-%COMP%]   .auth_left_panel[_ngcontent-%COMP%], .authenticity_wrap[_ngcontent-%COMP%]   .auth_right_panel[_ngcontent-%COMP%] {\n  padding: 0 10px;\n  width: 50%;\n}\n\n@media screen and (max-width: 576px) {\n  .authenticity_wrap[_ngcontent-%COMP%]   .auth_left_panel[_ngcontent-%COMP%], .authenticity_wrap[_ngcontent-%COMP%]   .auth_right_panel[_ngcontent-%COMP%] {\n    padding: 0 5px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFwuLlxcbmZ0LWdhbGxlcnkuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxjQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0FBQ0o7O0FBRUE7RUFDSSxZQUFBO0VBQ0EsV0FBQTtBQUNKOztBQUdJO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7QUFBUjs7QUFFUTtFQUxKO0lBTVEsZUFBQTtJQUNBLGdCQUFBO0lBQ0EsbUJBQUE7RUFDVjtBQUNGOztBQUNROztFQUVJLGtCQUFBO0FBQ1o7O0FBQ1k7RUFKSjs7SUFLUSxpQkFBQTtJQUNBLGtCQUFBO0VBR2Q7QUFDRjs7QUFFQTtFQUNJLHNCQUFBO0VBRUEscUJBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7QUFBSjs7QUFHUTtFQUNJLFVBQUE7QUFEWjs7QUFNUTtFQUNJLFVBQUE7QUFKWjs7QUFRSTtFQUNJLGtCQUFBO0VBQ0EsVUFBQTtFQUNBLFFBQUE7RUFDQSxVQUFBO0VBQ0EseUJBQUE7QUFOUjs7QUFnQkE7RUFDSSxzQkFBQTtFQUVBLHFCQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0FBZEo7O0FBaUJRO0VBQ0ksVUFBQTtBQWZaOztBQW9CUTtFQUNJLFVBQUE7QUFsQlo7O0FBc0JJO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtFQUNBLFVBQUE7RUFDQSx5QkFBQTtBQXBCUjs7QUFzQkk7RUFDSSxjQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtBQXBCUjs7QUF1QkE7RUFDSSxXQUFBO0VBQ0EsYUFBQTtFQUNBLHNCQUFBO0FBcEJKOztBQXVCQTtFQUNJLHNCQUFBO0VBRUEscUJBQUE7QUFyQko7O0FBdUJJO0VBRUksYUFBQTtBQXRCUjs7QUF3QlE7RUFKSjtJQUtRLGFBQUE7RUFyQlY7QUFDRjs7QUF5Qkk7RUFDSSxhQUFBO0FBdkJSOztBQXlCUTtFQUhKO0lBSVEsYUFBQTtFQXRCVjtBQUNGOztBQTBCQTtFQUNJLGFBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0VBQ0EsbUJBQUE7QUF2Qko7O0FBeUJJO0VBTko7SUFPUSxpQkFBQTtJQUNBLGtCQUFBO0VBdEJOO0FBQ0Y7O0FBd0JJOztFQUVJLGVBQUE7RUFDQSxVQUFBO0FBdEJSOztBQXdCUTtFQUxKOztJQU1RLGNBQUE7RUFwQlY7QUFDRiIsImZpbGUiOiJuZnQtZ2FsbGVyeS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXIge1xyXG4gICAgbWFyZ2luLXRvcDogNSU7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDIlO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDUlO1xyXG59XHJcblxyXG4ubmZ0LWljb257XHJcbiAgICBoZWlnaHQ6IDQwcHg7XHJcbiAgICB3aWR0aDogNDBweDtcclxufVxyXG5cclxuLm5mdEdhbGxlcnlXcmFwIHtcclxuICAgIC5idG5GbGV4V3JhcCB7XHJcbiAgICAgICAgZGlzcGxheTogZmxleDtcclxuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDMwcHg7XHJcblxyXG4gICAgICAgIEBtZWRpYSAobWF4LXdpZHRoOiA1NzZweCkge1xyXG4gICAgICAgICAgICBmbGV4LXdyYXA6IHdyYXA7XHJcbiAgICAgICAgICAgIG1hcmdpbi10b3A6IDMwcHg7XHJcbiAgICAgICAgICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBhLFxyXG4gICAgICAgIGJ1dHRvbiB7XHJcbiAgICAgICAgICAgIG1hcmdpbi1yaWdodDogMTVweDtcclxuXHJcbiAgICAgICAgICAgIEBtZWRpYSAobWF4LXdpZHRoOiA1NzZweCkge1xyXG4gICAgICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OiA1cHg7XHJcbiAgICAgICAgICAgICAgICBtYXJnaW4tYm90dG9tOiA1cHg7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgICB9XHJcbn1cclxuXHJcbi5uZnRzSG9sZGVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XHJcbiAgICAvL2JvcmRlci1yYWRpdXM6IDEwcHg7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAwLjFyZW07XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcblxyXG4gICAgJjpob3ZlciB7XHJcbiAgICAgICAgLmN1c3RvbUNoZWNrYm94V3JhcCB7XHJcbiAgICAgICAgICAgIG9wYWNpdHk6IDE7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgICYuY2hlY2tlZCB7XHJcbiAgICAgICAgLmN1c3RvbUNoZWNrYm94V3JhcCB7XHJcbiAgICAgICAgICAgIG9wYWNpdHk6IDE7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC5jdXN0b21DaGVja2JveFdyYXAge1xyXG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgICByaWdodDogMHB4O1xyXG4gICAgICAgIHRvcDogN3B4O1xyXG4gICAgICAgIG9wYWNpdHk6IDA7XHJcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMXMgZWFzZTtcclxuICAgICAgICAvLyBkaXNwbGF5OiBub25lO1xyXG4gICAgfVxyXG4gICAgLy8gc3BhbntcclxuICAgIC8vICAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIC8vICAgICBwYWRkaW5nLWxlZnQ6IGF1dG87XHJcbiAgICAvLyAgICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgLy8gICAgIGNvbG9yOiBncmF5O1xyXG4gICAgLy8gfVxyXG59XHJcbi5uZnRzSG9sZGVyU20ge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcclxuICAgIC8vYm9yZGVyLXJhZGl1czogMTBweDtcclxuICAgIG1hcmdpbi1ib3R0b206IDAuMXJlbTtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuXHJcbiAgICAmOmhvdmVyIHtcclxuICAgICAgICAuY3VzdG9tQ2hlY2tib3hXcmFwIHtcclxuICAgICAgICAgICAgb3BhY2l0eTogMTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgJi5jaGVja2VkIHtcclxuICAgICAgICAuY3VzdG9tQ2hlY2tib3hXcmFwIHtcclxuICAgICAgICAgICAgb3BhY2l0eTogMTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgLmN1c3RvbUNoZWNrYm94V3JhcCB7XHJcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAgIHJpZ2h0OiAwO1xyXG4gICAgICAgIHRvcDogN3B4O1xyXG4gICAgICAgIG9wYWNpdHk6IDA7XHJcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMXMgZWFzZTtcclxuICAgIH1cclxuICAgIHNwYW57XHJcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcclxuICAgICAgICBjb2xvcjogZ3JheTtcclxuICAgIH1cclxufVxyXG4ubmZ0cyB7XHJcbiAgICB3aWR0aDogYXV0bztcclxuICAgIGhlaWdodDogMTUwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG59XHJcblxyXG4ubmZ0TWFpbkltZ0hvbGRlciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xyXG4gICAgLy9ib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMC4xcmVtO1xyXG5cclxuICAgIC5uZnRNYWluSW1nIHtcclxuICAgICAgICAvLyB3aWR0aDogMTAwJTtcclxuICAgICAgICBoZWlnaHQ6IDMwMHB4O1xyXG5cclxuICAgICAgICBAbWVkaWEgKG1heC13aWR0aDo1NzZweCkge1xyXG4gICAgICAgICAgICBoZWlnaHQ6IDMwMHB4O1xyXG4gICAgICAgIH1cclxuICAgIH1cclxuXHJcblxyXG4gICAgLm5mdE1haW5JbWdTbSB7XHJcbiAgICAgICAgaGVpZ2h0OiAyNTBweDtcclxuXHJcbiAgICAgICAgQG1lZGlhIChtYXgtd2lkdGg6NTc2cHgpIHtcclxuICAgICAgICAgICAgaGVpZ2h0OiAxNDBweDtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbn1cclxuXHJcbi5hdXRoZW50aWNpdHlfd3JhcCB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XHJcbiAgICBtYXJnaW4tbGVmdDogLTEwcHg7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IC0xMHB4O1xyXG5cclxuICAgIEBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU3NnB4KSB7XHJcbiAgICAgICAgbWFyZ2luLWxlZnQ6IC01cHg7XHJcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAtNXB4O1xyXG4gICAgfVxyXG5cclxuICAgIC5hdXRoX2xlZnRfcGFuZWwsXHJcbiAgICAuYXV0aF9yaWdodF9wYW5lbCB7XHJcbiAgICAgICAgcGFkZGluZzogMCAxMHB4O1xyXG4gICAgICAgIHdpZHRoOiA1MCU7XHJcblxyXG4gICAgICAgIEBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU3NnB4KSB7XHJcbiAgICAgICAgICAgIHBhZGRpbmc6IDAgNXB4O1xyXG4gICAgICAgIH1cclxuICAgIH1cclxufSJdfQ== */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbTooltip"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterLink"], ng_click_outside__WEBPACK_IMPORTED_MODULE_8__["ClickOutsideDirective"], ngx_lottie__WEBPACK_IMPORTED_MODULE_9__["LottieComponent"]], styles: [".container[_ngcontent-%COMP%] {\n  margin-top: 5%;\n  margin-right: 2%;\n  margin-left: 5%;\n}\n\n.nft-icon[_ngcontent-%COMP%] {\n  height: 40px;\n  width: 40px;\n}\n\n.nftGalleryWrap[_ngcontent-%COMP%]   .btnFlexWrap[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  margin-bottom: 30px;\n}\n\n@media (max-width: 576px) {\n  .nftGalleryWrap[_ngcontent-%COMP%]   .btnFlexWrap[_ngcontent-%COMP%] {\n    flex-wrap: wrap;\n    margin-top: 30px;\n    margin-bottom: 10px;\n  }\n}\n\n.nftGalleryWrap[_ngcontent-%COMP%]   .btnFlexWrap[_ngcontent-%COMP%]   a[_ngcontent-%COMP%], .nftGalleryWrap[_ngcontent-%COMP%]   .btnFlexWrap[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  margin-right: 15px;\n}\n\n@media (max-width: 576px) {\n  .nftGalleryWrap[_ngcontent-%COMP%]   .btnFlexWrap[_ngcontent-%COMP%]   a[_ngcontent-%COMP%], .nftGalleryWrap[_ngcontent-%COMP%]   .btnFlexWrap[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n    margin-right: 5px;\n    margin-bottom: 5px;\n  }\n}\n\n.nftsHolder[_ngcontent-%COMP%] {\n  background-color: #fff;\n  margin-bottom: 0.1rem;\n  position: relative;\n  cursor: pointer;\n}\n\n.nftsHolder[_ngcontent-%COMP%]:hover   .customCheckboxWrap[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n\n.nftsHolder.checked[_ngcontent-%COMP%]   .customCheckboxWrap[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n\n.nftsHolder[_ngcontent-%COMP%]   .customCheckboxWrap[_ngcontent-%COMP%] {\n  position: absolute;\n  right: 0px;\n  top: 7px;\n  opacity: 0;\n  transition: all 0.1s ease;\n}\n\n.nftsHolderSm[_ngcontent-%COMP%] {\n  background-color: #fff;\n  margin-bottom: 0.1rem;\n  position: relative;\n  cursor: pointer;\n}\n\n.nftsHolderSm[_ngcontent-%COMP%]:hover   .customCheckboxWrap[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n\n.nftsHolderSm.checked[_ngcontent-%COMP%]   .customCheckboxWrap[_ngcontent-%COMP%] {\n  opacity: 1;\n}\n\n.nftsHolderSm[_ngcontent-%COMP%]   .customCheckboxWrap[_ngcontent-%COMP%] {\n  position: absolute;\n  right: 0;\n  top: 7px;\n  opacity: 0;\n  transition: all 0.1s ease;\n}\n\n.nftsHolderSm[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  display: block;\n  text-align: center;\n  font-size: 16px;\n  color: gray;\n}\n\n.nfts[_ngcontent-%COMP%] {\n  width: auto;\n  height: 150px;\n  background-size: cover;\n}\n\n.nftMainImgHolder[_ngcontent-%COMP%] {\n  background-color: #fff;\n  margin-bottom: 0.1rem;\n}\n\n.nftMainImgHolder[_ngcontent-%COMP%]   .nftMainImg[_ngcontent-%COMP%] {\n  height: 300px;\n}\n\n@media (max-width: 576px) {\n  .nftMainImgHolder[_ngcontent-%COMP%]   .nftMainImg[_ngcontent-%COMP%] {\n    height: 300px;\n  }\n}\n\n.nftMainImgHolder[_ngcontent-%COMP%]   .nftMainImgSm[_ngcontent-%COMP%] {\n  height: 250px;\n}\n\n@media (max-width: 576px) {\n  .nftMainImgHolder[_ngcontent-%COMP%]   .nftMainImgSm[_ngcontent-%COMP%] {\n    height: 140px;\n  }\n}\n\n.authenticity_wrap[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: flex-start;\n  margin-left: -10px;\n  margin-right: -10px;\n}\n\n@media screen and (max-width: 576px) {\n  .authenticity_wrap[_ngcontent-%COMP%] {\n    margin-left: -5px;\n    margin-right: -5px;\n  }\n}\n\n.authenticity_wrap[_ngcontent-%COMP%]   .auth_left_panel[_ngcontent-%COMP%], .authenticity_wrap[_ngcontent-%COMP%]   .auth_right_panel[_ngcontent-%COMP%] {\n  padding: 0 10px;\n  width: 50%;\n}\n\n@media screen and (max-width: 576px) {\n  .authenticity_wrap[_ngcontent-%COMP%]   .auth_left_panel[_ngcontent-%COMP%], .authenticity_wrap[_ngcontent-%COMP%]   .auth_right_panel[_ngcontent-%COMP%] {\n    padding: 0 5px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXC4uXFwuLlxcbmZ0LWdhbGxlcnkuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxjQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0FBQ0o7O0FBRUE7RUFDSSxZQUFBO0VBQ0EsV0FBQTtBQUNKOztBQUdJO0VBQ0ksYUFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7QUFBUjs7QUFFUTtFQUxKO0lBTVEsZUFBQTtJQUNBLGdCQUFBO0lBQ0EsbUJBQUE7RUFDVjtBQUNGOztBQUNROztFQUVJLGtCQUFBO0FBQ1o7O0FBQ1k7RUFKSjs7SUFLUSxpQkFBQTtJQUNBLGtCQUFBO0VBR2Q7QUFDRjs7QUFFQTtFQUNJLHNCQUFBO0VBRUEscUJBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7QUFBSjs7QUFHUTtFQUNJLFVBQUE7QUFEWjs7QUFNUTtFQUNJLFVBQUE7QUFKWjs7QUFRSTtFQUNJLGtCQUFBO0VBQ0EsVUFBQTtFQUNBLFFBQUE7RUFDQSxVQUFBO0VBQ0EseUJBQUE7QUFOUjs7QUFnQkE7RUFDSSxzQkFBQTtFQUVBLHFCQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0FBZEo7O0FBaUJRO0VBQ0ksVUFBQTtBQWZaOztBQW9CUTtFQUNJLFVBQUE7QUFsQlo7O0FBc0JJO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtFQUNBLFVBQUE7RUFDQSx5QkFBQTtBQXBCUjs7QUFzQkk7RUFDSSxjQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtBQXBCUjs7QUF1QkE7RUFDSSxXQUFBO0VBQ0EsYUFBQTtFQUNBLHNCQUFBO0FBcEJKOztBQXVCQTtFQUNJLHNCQUFBO0VBRUEscUJBQUE7QUFyQko7O0FBdUJJO0VBRUksYUFBQTtBQXRCUjs7QUF3QlE7RUFKSjtJQUtRLGFBQUE7RUFyQlY7QUFDRjs7QUF5Qkk7RUFDSSxhQUFBO0FBdkJSOztBQXlCUTtFQUhKO0lBSVEsYUFBQTtFQXRCVjtBQUNGOztBQTBCQTtFQUNJLGFBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0VBQ0EsbUJBQUE7QUF2Qko7O0FBeUJJO0VBTko7SUFPUSxpQkFBQTtJQUNBLGtCQUFBO0VBdEJOO0FBQ0Y7O0FBd0JJOztFQUVJLGVBQUE7RUFDQSxVQUFBO0FBdEJSOztBQXdCUTtFQUxKOztJQU1RLGNBQUE7RUFwQlY7QUFDRiIsImZpbGUiOiJuZnQtZ2FsbGVyeS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXIge1xyXG4gICAgbWFyZ2luLXRvcDogNSU7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDIlO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDUlO1xyXG59XHJcblxyXG4ubmZ0LWljb257XHJcbiAgICBoZWlnaHQ6IDQwcHg7XHJcbiAgICB3aWR0aDogNDBweDtcclxufVxyXG5cclxuLm5mdEdhbGxlcnlXcmFwIHtcclxuICAgIC5idG5GbGV4V3JhcCB7XHJcbiAgICAgICAgZGlzcGxheTogZmxleDtcclxuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDMwcHg7XHJcblxyXG4gICAgICAgIEBtZWRpYSAobWF4LXdpZHRoOiA1NzZweCkge1xyXG4gICAgICAgICAgICBmbGV4LXdyYXA6IHdyYXA7XHJcbiAgICAgICAgICAgIG1hcmdpbi10b3A6IDMwcHg7XHJcbiAgICAgICAgICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBhLFxyXG4gICAgICAgIGJ1dHRvbiB7XHJcbiAgICAgICAgICAgIG1hcmdpbi1yaWdodDogMTVweDtcclxuXHJcbiAgICAgICAgICAgIEBtZWRpYSAobWF4LXdpZHRoOiA1NzZweCkge1xyXG4gICAgICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OiA1cHg7XHJcbiAgICAgICAgICAgICAgICBtYXJnaW4tYm90dG9tOiA1cHg7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgICB9XHJcbn1cclxuXHJcbi5uZnRzSG9sZGVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XHJcbiAgICAvL2JvcmRlci1yYWRpdXM6IDEwcHg7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAwLjFyZW07XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcblxyXG4gICAgJjpob3ZlciB7XHJcbiAgICAgICAgLmN1c3RvbUNoZWNrYm94V3JhcCB7XHJcbiAgICAgICAgICAgIG9wYWNpdHk6IDE7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgICYuY2hlY2tlZCB7XHJcbiAgICAgICAgLmN1c3RvbUNoZWNrYm94V3JhcCB7XHJcbiAgICAgICAgICAgIG9wYWNpdHk6IDE7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC5jdXN0b21DaGVja2JveFdyYXAge1xyXG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgICByaWdodDogMHB4O1xyXG4gICAgICAgIHRvcDogN3B4O1xyXG4gICAgICAgIG9wYWNpdHk6IDA7XHJcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMXMgZWFzZTtcclxuICAgICAgICAvLyBkaXNwbGF5OiBub25lO1xyXG4gICAgfVxyXG4gICAgLy8gc3BhbntcclxuICAgIC8vICAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIC8vICAgICBwYWRkaW5nLWxlZnQ6IGF1dG87XHJcbiAgICAvLyAgICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgLy8gICAgIGNvbG9yOiBncmF5O1xyXG4gICAgLy8gfVxyXG59XHJcbi5uZnRzSG9sZGVyU20ge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcclxuICAgIC8vYm9yZGVyLXJhZGl1czogMTBweDtcclxuICAgIG1hcmdpbi1ib3R0b206IDAuMXJlbTtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuXHJcbiAgICAmOmhvdmVyIHtcclxuICAgICAgICAuY3VzdG9tQ2hlY2tib3hXcmFwIHtcclxuICAgICAgICAgICAgb3BhY2l0eTogMTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgJi5jaGVja2VkIHtcclxuICAgICAgICAuY3VzdG9tQ2hlY2tib3hXcmFwIHtcclxuICAgICAgICAgICAgb3BhY2l0eTogMTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgLmN1c3RvbUNoZWNrYm94V3JhcCB7XHJcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAgIHJpZ2h0OiAwO1xyXG4gICAgICAgIHRvcDogN3B4O1xyXG4gICAgICAgIG9wYWNpdHk6IDA7XHJcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMXMgZWFzZTtcclxuICAgIH1cclxuICAgIHNwYW57XHJcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcclxuICAgICAgICBjb2xvcjogZ3JheTtcclxuICAgIH1cclxufVxyXG4ubmZ0cyB7XHJcbiAgICB3aWR0aDogYXV0bztcclxuICAgIGhlaWdodDogMTUwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG59XHJcblxyXG4ubmZ0TWFpbkltZ0hvbGRlciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xyXG4gICAgLy9ib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMC4xcmVtO1xyXG5cclxuICAgIC5uZnRNYWluSW1nIHtcclxuICAgICAgICAvLyB3aWR0aDogMTAwJTtcclxuICAgICAgICBoZWlnaHQ6IDMwMHB4O1xyXG5cclxuICAgICAgICBAbWVkaWEgKG1heC13aWR0aDo1NzZweCkge1xyXG4gICAgICAgICAgICBoZWlnaHQ6IDMwMHB4O1xyXG4gICAgICAgIH1cclxuICAgIH1cclxuXHJcblxyXG4gICAgLm5mdE1haW5JbWdTbSB7XHJcbiAgICAgICAgaGVpZ2h0OiAyNTBweDtcclxuXHJcbiAgICAgICAgQG1lZGlhIChtYXgtd2lkdGg6NTc2cHgpIHtcclxuICAgICAgICAgICAgaGVpZ2h0OiAxNDBweDtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbn1cclxuXHJcbi5hdXRoZW50aWNpdHlfd3JhcCB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XHJcbiAgICBtYXJnaW4tbGVmdDogLTEwcHg7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IC0xMHB4O1xyXG5cclxuICAgIEBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU3NnB4KSB7XHJcbiAgICAgICAgbWFyZ2luLWxlZnQ6IC01cHg7XHJcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAtNXB4O1xyXG4gICAgfVxyXG5cclxuICAgIC5hdXRoX2xlZnRfcGFuZWwsXHJcbiAgICAuYXV0aF9yaWdodF9wYW5lbCB7XHJcbiAgICAgICAgcGFkZGluZzogMCAxMHB4O1xyXG4gICAgICAgIHdpZHRoOiA1MCU7XHJcblxyXG4gICAgICAgIEBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU3NnB4KSB7XHJcbiAgICAgICAgICAgIHBhZGRpbmc6IDAgNXB4O1xyXG4gICAgICAgIH1cclxuICAgIH1cclxufSJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](NftGalleryComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
         args: [{
@@ -1281,7 +1196,7 @@ NftGalleryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefi
                 templateUrl: './nft-gallery.component.html',
                 styleUrls: ['./nft-gallery.component.scss']
             }]
-    }], function () { return [{ type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"] }, { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"] }, { type: src_app_services_event_service__WEBPACK_IMPORTED_MODULE_5__["EventService"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] }]; }, null); })();
+    }], function () { return [{ type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"] }, { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }]; }, null); })();
 
 
 /***/ }),

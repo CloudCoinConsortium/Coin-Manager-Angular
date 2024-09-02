@@ -619,7 +619,6 @@ class HealthComponent {
                         this.goTODash = true;
                     }
                     else {
-                        // this.goTODash = true;
                         if (((_b = (_a = this.payload) === null || _a === void 0 ? void 0 : _a.data) === null || _b === void 0 ? void 0 : _b.message) == "No coins to detect") {
                             sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
                                 title: "Fracked coins found. Use the Fix Fracked tool to fix them.",

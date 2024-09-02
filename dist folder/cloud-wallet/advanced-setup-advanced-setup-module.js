@@ -127,18 +127,16 @@ class AdvancedSetupComponent {
         this.raida = raida;
         this.storage = storage;
         this.fb = fb;
-        this.showDownload = false;
         this.options = {
             path: 'https://raida11.cloudcoin.global/animation/cloud_loading.json',
         };
+        this.showDownload = false;
         this.successInfo = false;
         this.successMsg = '';
         this.errorInfo = false;
         this.errorMsg = '';
         this.payload = null;
         this.taskId = null;
-        this.showError = false;
-        this.fileName = '';
         this.isDownload = false;
         this.continue = false;
         this.emailForm = this.fb.group({
@@ -162,10 +160,6 @@ class AdvancedSetupComponent {
         this.eventService.changeSky.subscribe(message => {
             this.allSky = message;
         });
-    }
-    save() {
-        localStorage.setItem('emailSky', this.emailForm.controls.email.value);
-        localStorage.setItem('setupType', "advance");
     }
     animationCreated(animationItem) {
         console.log(animationItem);
@@ -198,35 +192,7 @@ class AdvancedSetupComponent {
             this.eventService.emitThemeTogEvent();
         }
     }
-    // continue() {
-    //   this.advanceRecovery = true;
-    // };
-    // closeAdvanceRecovery() {
-    //   this.advanceRecovery = false;
-    // }
-    getStatus(e) {
-        this.isSelect = e.target.checked;
-        if (this.isSelect == false) {
-            this.emailForm.controls['email'].disable();
-            this.emailForm.controls['email'].patchValue('');
-        }
-        else {
-            this.emailForm.controls['email'].enable();
-        }
-    }
     onFileInput(event) {
-        // const file: File = event.target.files[0];
-        // if (file) {
-        //   this.fileName = file.name;
-        //   const formData = new FormData();
-        //   formData.append("thumbnail", file);
-        //   let fileReader = new FileReader();
-        //   fileReader.onload = (e) => {
-        //     this.isDownload = true;
-        //     this.detectWallet(fileReader.result);
-        //   }
-        //   fileReader.readAsText(file);
-        // }
         this.errorInfo = false;
         this.isDownload = true;
         this.successInfo = false;
@@ -234,7 +200,6 @@ class AdvancedSetupComponent {
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
-                console.log(reader.result);
                 this.unpack(reader.result);
             };
             reader.readAsDataURL(file);
@@ -279,13 +244,10 @@ class AdvancedSetupComponent {
                     ]
                 };
                 let detection = yield this.raida.detect(data);
-                console.log(detection, "response");
                 if (detection.status == 'success') {
                     this.successInfo = true;
                     this.errorInfo = false;
                     let taskId = detection.payload;
-                    // console.log("sn value:" + this.payload.data['Sn'])
-                    // console.log("ans value:" + this.payload.data['Ans'])
                     this.doCheckcoin(taskId.id, (data) => { });
                 }
                 else {
@@ -304,7 +266,6 @@ class AdvancedSetupComponent {
     doCheck1(taskID, xdata) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             let task = yield this.raida.doCheck(taskID);
-            //console.log(taskID)
             if (task) {
                 this.payload = task.payload;
                 if (this.payload.status == "error" || this.payload.status == "completed") {
@@ -327,12 +288,6 @@ class AdvancedSetupComponent {
                         this.showLoading(false);
                         this.successInfo = true;
                         this.errorInfo = false;
-                        //console.log("payload.data:" + task.payload.data)
-                        // var findsky = task.payload.data.filter(x => {
-                        //   return x.name == this.user;
-                        // })
-                        // console.log("findsky[0].idcoin?.sn" + findsky[0].idcoin?.sn)
-                        //localStorage.setItem('serial', findsky[0].idcoin?.sn);
                         this.router.navigate(['/skywallet/completed']);
                     }
                     else {
@@ -384,7 +339,7 @@ class AdvancedSetupComponent {
         });
     }
     doCheck123(taskID, xdata) {
-        var _a, _b, _c;
+        var _a, _b;
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             let task = yield this.raida.doCheck(taskID);
             if (task) {
@@ -396,8 +351,7 @@ class AdvancedSetupComponent {
                         var findsky = task.payload.data.filter(x => {
                             return x.name == this.user;
                         });
-                        console.log("findsky[0].idcoin?.sn" + ((_b = findsky[0].idcoin) === null || _b === void 0 ? void 0 : _b.sn));
-                        localStorage.setItem('serial', (_c = findsky[0].idcoin) === null || _c === void 0 ? void 0 : _c.sn);
+                        localStorage.setItem('serial', (_b = findsky[0].idcoin) === null || _b === void 0 ? void 0 : _b.sn);
                     }
                     return;
                 }
@@ -418,11 +372,7 @@ class AdvancedSetupComponent {
                             sn: this.payload.data['Sn'],
                             ans: this.payload.data['Ans']
                         };
-                        // console.log("sn value:" + this.payload.data['Sn'])
-                        // console.log("ans value:" + this.payload.data['Ans'])
                         this.detectWallet(this.idata, "0");
-                        // this.createSky(data);
-                        // this.createSky(this.cloudcoin?.coins[0]);
                         this.successInfo = true;
                         this.errorInfo = false;
                         this.successMsg = "Done: Pass Key downloaded successfully!";
@@ -435,8 +385,6 @@ class AdvancedSetupComponent {
                     }
                     return;
                 }
-                // this.successInfo = true;
-                // this.successMsg = "Doing.... Task ID " + taskID + ", Progress " + this.payload.progress + "%";
                 setTimeout(() => {
                     this.doCheck(taskID, xdata);
                 }, 500);
@@ -485,8 +433,6 @@ class AdvancedSetupComponent {
                     }
                     return;
                 }
-                // this.successInfo = true;
-                // this.successMsg = "Doing.... Task ID " + taskID + ", Progress " + this.payload.progress + "%";
                 setTimeout(() => {
                     this.doCheckcoin(taskID, xdata);
                 }, 500);
@@ -511,7 +457,6 @@ class AdvancedSetupComponent {
                         this.successMsg = "Done " + JSON.stringify(data);
                     });
                 }
-                console.log(response);
             }
             catch (e) {
                 console.log(e);
@@ -528,10 +473,6 @@ class AdvancedSetupComponent {
                     coin: this.idata
                 };
                 let wallet = yield this.raida.createSky(idata);
-                console.log(wallet, "response");
-                // console.log("name:" + this.user)
-                // console.log("coin:" + JSON.stringify(idata.coin))
-                // console.log("coin:" + JSON.stringify(this.idata))
                 if (wallet.status == 'success') {
                     this.showLoading(true);
                     this.successInfo = true;

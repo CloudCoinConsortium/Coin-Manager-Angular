@@ -28,18 +28,6 @@ const routes = [
                 loadChildren: () => Promise.all(/*! import() | create-add-dash-create-add-dash-module */[__webpack_require__.e("common"), __webpack_require__.e("create-add-dash-create-add-dash-module")]).then(__webpack_require__.bind(null, /*! ./create-add-dash/create-add-dash.module */ "QlvU")).then(m => m.CreateAddDashModule)
             },
             {
-                path: 'simple-setup',
-                loadChildren: () => Promise.all(/*! import() | simple-dash-simple-dash-module */[__webpack_require__.e("common"), __webpack_require__.e("simple-dash-simple-dash-module")]).then(__webpack_require__.bind(null, /*! ./simple-dash/simple-dash.module */ "Zmm9")).then(m => m.SimpleDashModule)
-            },
-            // {
-            //   path: 'upload-cc',
-            //   loadChildren: () => import('./upload-dash/upload-dash.module').then(m => m.UploadDashModule)
-            // },
-            {
-                path: 'security-setup',
-                loadChildren: () => Promise.all(/*! import() | security-dash-security-dash-module */[__webpack_require__.e("common"), __webpack_require__.e("security-dash-security-dash-module")]).then(__webpack_require__.bind(null, /*! ./security-dash/security-dash.module */ "cXhz")).then(m => m.SecurityDashModule)
-            },
-            {
                 path: '',
                 loadChildren: () => __webpack_require__.e(/*! import() | advanced-dash-advanced-dash-module */ "advanced-dash-advanced-dash-module").then(__webpack_require__.bind(null, /*! ./advanced-dash/advanced-dash.module */ "ggXP")).then(m => m.AdvancedDashModule)
             },

@@ -80,7 +80,7 @@ function LocalNameComponent_div_20_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LocalNameComponent_div_20_span_1_Template, 3, 0, "span", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "span", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "img", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, " Only numbers, letters and special characters (except < > : | ? * \" / \\) are allowed.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, " Only numbers, letters and special characters (except <> : | ? * \" / \\) are allowed.");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {

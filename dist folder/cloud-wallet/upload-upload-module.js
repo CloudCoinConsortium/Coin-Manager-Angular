@@ -89,7 +89,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const _c0 = ["fileDropRef"];
 const _c1 = function (a0) { return { "width": a0 }; };
-function UploadComponent_div_0_div_6_div_21_Template(rf, ctx) { if (rf & 1) {
+function UploadComponent_div_0_div_6_div_20_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 31);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 32);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "div", 33);
@@ -100,7 +100,7 @@ function UploadComponent_div_0_div_6_div_21_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](1, _c1, ctx_r5.payload.progress + "%"));
 } }
-function UploadComponent_div_0_div_6_span_23_Template(rf, ctx) { if (rf & 1) {
+function UploadComponent_div_0_div_6_span_22_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "span", 34);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "img", 35);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
@@ -110,7 +110,7 @@ function UploadComponent_div_0_div_6_span_23_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r6.errorMsg);
 } }
-function UploadComponent_div_0_div_6_div_24_Template(rf, ctx) { if (rf & 1) {
+function UploadComponent_div_0_div_6_div_23_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 37);
@@ -125,7 +125,7 @@ function UploadComponent_div_0_div_6_div_24_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" Total number of files selected: ", ctx_r7.files.length, " ");
 } }
-function UploadComponent_div_0_div_6_div_26_Template(rf, ctx) { if (rf & 1) {
+function UploadComponent_div_0_div_6_div_25_Template(rf, ctx) { if (rf & 1) {
     const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 37);
@@ -142,7 +142,7 @@ function UploadComponent_div_0_div_6_div_26_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "a", 43);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_0_div_6_div_26_Template_a_click_8_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r12); const i_r10 = ctx.index; const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r11.deleteFile(i_r10); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_0_div_6_div_25_Template_a_click_8_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r12); const i_r10 = ctx.index; const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r11.deleteFile(i_r10); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -170,47 +170,46 @@ function UploadComponent_div_0_div_6_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](10, "div", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](11, "div", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "div", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "div", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "a", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_0_div_6_Template_a_click_15_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r14); const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r17.getPath(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "span", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](17, "Select Coins to Deposit");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "div", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "a", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_0_div_6_Template_a_click_14_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r14); const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r17.getPath(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "span", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, "Select Coins to Deposit");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "span", 20);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](19, "(Maximum Import: 24K CC or 300K Legacy CC)");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "span", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](18, "(Maximum Import: 24K CC or 300K Legacy CC)");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](20, "div", 21);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, UploadComponent_div_0_div_6_div_21_Template, 3, 3, "div", 22);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](22);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, UploadComponent_div_0_div_6_span_23_Template, 3, 1, "span", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "div", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, UploadComponent_div_0_div_6_div_20_Template, 3, 3, "div", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, UploadComponent_div_0_div_6_span_22_Template, 3, 1, "span", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, UploadComponent_div_0_div_6_div_24_Template, 5, 1, "div", 24);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "div", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, UploadComponent_div_0_div_6_div_26_Template, 9, 1, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, UploadComponent_div_0_div_6_div_23_Template, 5, 1, "div", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](24, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, UploadComponent_div_0_div_6_div_25_Template, 9, 1, "div", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](27, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](28, "img", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](29, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](30, "When coins are deposited, they receive new verification keys that allow them to prove their authenticity. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](26, "div", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](27, "img", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](29, "When coins are deposited, they receive new verification keys that allow them to prove their authenticity. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](32, " These new keys will last for five years. You are always free to renew these five years by simply navigating to \"Other Actions\" in your Wallet and selecting \"Verify Coin Authenticity\". ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](30, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](31, " These new keys will last for five years. You are always free to renew these five years by simply navigating to \"Other Actions\" in your Wallet and selecting \"Verify Coin Authenticity\". ");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](33, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](34, " Any previous backups of these coins will be considered counterfeit and no longer valid. Be sure to create new backups of the Wallet that these coins are being added to and store them in a safe place. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](32, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](33, " Any previous backups of these coins will be considered counterfeit and no longer valid. Be sure to create new backups of the Wallet that these coins are being added to and store them in a safe place. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](35, "div", 29);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](36, "a", 30);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_0_div_6_Template_a_click_36_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r14); const ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r18.next(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](37, "Deposit Selected Coins");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "div", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](35, "a", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_0_div_6_Template_a_click_35_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r14); const ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r18.next(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](36, "Deposit Selected Coins");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -219,7 +218,7 @@ function UploadComponent_div_0_div_6_Template(rf, ctx) { if (rf & 1) {
     const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](9);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx_r4.tag);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](11);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r4.successInfo);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r4.errorInfo);
@@ -240,7 +239,7 @@ function UploadComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](6, UploadComponent_div_0_div_6_Template, 38, 8, "div", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](6, UploadComponent_div_0_div_6_Template, 37, 8, "div", 8);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
@@ -280,7 +279,7 @@ function UploadComponent_div_2_div_4_div_8_Template(rf, ctx) { if (rf & 1) {
 function UploadComponent_div_2_div_4_div_9_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "label", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Coins Fracked: \u00A0 ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Coins already exists in your wallet: \u00A0 ");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "span", 45);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -289,23 +288,9 @@ function UploadComponent_div_2_div_4_div_9_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r24.payload == null ? null : ctx_r24.payload.data == null ? null : ctx_r24.payload.data.pown_results == null ? null : ctx_r24.payload.data.pown_results.fracked);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r24.payload == null ? null : ctx_r24.payload.data == null ? null : ctx_r24.payload.data.pown_results == null ? null : ctx_r24.payload.data.pown_results.already_exists);
 } }
 function UploadComponent_div_2_div_4_div_10_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "label", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Coins already exists in your wallet: \u00A0 ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "span", 45);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r25.payload == null ? null : ctx_r25.payload.data == null ? null : ctx_r25.payload.data.pown_results == null ? null : ctx_r25.payload.data.pown_results.already_exists);
-} }
-function UploadComponent_div_2_div_4_div_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "label", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Coins in limbo: \u00A0 ");
@@ -315,25 +300,11 @@ function UploadComponent_div_2_div_4_div_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
+    const ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r26.payload == null ? null : ctx_r26.payload.data == null ? null : ctx_r26.payload.data.pown_results == null ? null : ctx_r26.payload.data.pown_results.limbo);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r25.payload == null ? null : ctx_r25.payload.data == null ? null : ctx_r25.payload.data.pown_results == null ? null : ctx_r25.payload.data.pown_results.limbo);
 } }
-function UploadComponent_div_2_div_4_div_12_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "label", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Total fixed coins: \u00A0 ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "span", 45);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r27.frackedDetail == null ? null : ctx_r27.frackedDetail.total_fixed);
-} }
-function UploadComponent_div_2_div_4_div_13_Template(rf, ctx) { if (rf & 1) {
+function UploadComponent_div_2_div_4_div_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "label", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Wrong Coin Type: \u00A0 ");
@@ -343,44 +314,16 @@ function UploadComponent_div_2_div_4_div_13_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
+    const ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r28.payload == null ? null : ctx_r28.payload.data == null ? null : ctx_r28.payload.data.pown_results == null ? null : ctx_r28.payload.data.pown_results.wrong_type);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r26.payload == null ? null : ctx_r26.payload.data == null ? null : ctx_r26.payload.data.pown_results == null ? null : ctx_r26.payload.data.pown_results.wrong_type);
 } }
-function UploadComponent_div_2_div_4_div_14_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "label", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Total skipped coins: \u00A0 ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "span", 45);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r29.frackedDetail == null ? null : ctx_r29.frackedDetail.total_skipped);
-} }
-function UploadComponent_div_2_div_4_div_15_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "label", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Total errors: \u00A0 ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "span", 45);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r30.frackedDetail == null ? null : ctx_r30.frackedDetail.total_errors);
-} }
-function UploadComponent_div_2_div_4_div_16_Template(rf, ctx) { if (rf & 1) {
-    const _r33 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+function UploadComponent_div_2_div_4_div_12_Template(rf, ctx) { if (rf & 1) {
+    const _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "label", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "a", 48);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_2_div_4_div_16_Template_a_click_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r33); const ctx_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r32.showreceipt = !ctx_r32.showreceipt; });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_2_div_4_div_12_Template_a_click_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r29); const ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r28.showreceipt = !ctx_r28.showreceipt; });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "See Receipt");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, "\u00A0");
@@ -388,7 +331,7 @@ function UploadComponent_div_2_div_4_div_16_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } }
 function UploadComponent_div_2_div_4_Template(rf, ctx) { if (rf & 1) {
-    const _r35 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    const _r31 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 9);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "div", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 13);
@@ -404,15 +347,11 @@ function UploadComponent_div_2_div_4_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](9, UploadComponent_div_2_div_4_div_9_Template, 5, 1, "div", 46);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](10, UploadComponent_div_2_div_4_div_10_Template, 5, 1, "div", 46);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, UploadComponent_div_2_div_4_div_11_Template, 5, 1, "div", 46);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](12, UploadComponent_div_2_div_4_div_12_Template, 5, 1, "div", 46);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, UploadComponent_div_2_div_4_div_13_Template, 5, 1, "div", 46);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, UploadComponent_div_2_div_4_div_14_Template, 5, 1, "div", 46);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, UploadComponent_div_2_div_4_div_15_Template, 5, 1, "div", 46);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, UploadComponent_div_2_div_4_div_16_Template, 5, 0, "div", 46);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](17, "div", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "a", 47);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_2_div_4_Template_a_click_18_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r35); const ctx_r34 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r34.go(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](19, "Close");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](12, UploadComponent_div_2_div_4_div_12_Template, 5, 0, "div", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](13, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "a", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_2_div_4_Template_a_click_14_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r31); const ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r30.go(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](15, "Close");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -424,19 +363,11 @@ function UploadComponent_div_2_div_4_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", (ctx_r19.payload == null ? null : ctx_r19.payload.data == null ? null : ctx_r19.payload.data.pown_results == null ? null : ctx_r19.payload.data.pown_results.counterfeit) > 0);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", (ctx_r19.payload == null ? null : ctx_r19.payload.data == null ? null : ctx_r19.payload.data.pown_results == null ? null : ctx_r19.payload.data.pown_results.fracked) > 0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", (ctx_r19.payload == null ? null : ctx_r19.payload.data == null ? null : ctx_r19.payload.data.pown_results == null ? null : ctx_r19.payload.data.pown_results.already_exists) > 0);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", (ctx_r19.payload == null ? null : ctx_r19.payload.data == null ? null : ctx_r19.payload.data.pown_results == null ? null : ctx_r19.payload.data.pown_results.limbo) > 0);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r19.isFracked && (ctx_r19.frackedDetail == null ? null : ctx_r19.frackedDetail.total_fixed) > 0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", (ctx_r19.payload == null ? null : ctx_r19.payload.data == null ? null : ctx_r19.payload.data.pown_results == null ? null : ctx_r19.payload.data.pown_results.wrong_type) > 0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r19.isFracked && (ctx_r19.frackedDetail == null ? null : ctx_r19.frackedDetail.total_skipped) > 0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r19.isFracked && (ctx_r19.frackedDetail == null ? null : ctx_r19.frackedDetail.total_errors) > 0);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r19.totalimport > 0);
 } }
@@ -457,9 +388,9 @@ function UploadComponent_div_2_div_6_div_7_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const ctx_r36 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
+    const ctx_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r36.payload == null ? null : ctx_r36.payload.data == null ? null : ctx_r36.payload.data.total_converted);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r32.payload == null ? null : ctx_r32.payload.data == null ? null : ctx_r32.payload.data.total_converted);
 } }
 function UploadComponent_div_2_div_6_div_8_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 13);
@@ -471,12 +402,12 @@ function UploadComponent_div_2_div_6_div_8_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const ctx_r37 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
+    const ctx_r33 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r37.payload == null ? null : ctx_r37.payload.data == null ? null : ctx_r37.payload.data.total_counterfeit);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r33.payload == null ? null : ctx_r33.payload.data == null ? null : ctx_r33.payload.data.total_counterfeit);
 } }
 function UploadComponent_div_2_div_6_Template(rf, ctx) { if (rf & 1) {
-    const _r39 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    const _r35 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 9);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "div", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 13);
@@ -491,7 +422,7 @@ function UploadComponent_div_2_div_6_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, UploadComponent_div_2_div_6_div_8_Template, 5, 1, "div", 46);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](9, "div", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "a", 47);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_2_div_6_Template_a_click_10_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r39); const ctx_r38 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r38.go(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_2_div_6_Template_a_click_10_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r35); const ctx_r34 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r34.go(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "Close");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -511,7 +442,7 @@ function UploadComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Deposit Results");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](4, UploadComponent_div_2_div_4_Template, 20, 11, "div", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](4, UploadComponent_div_2_div_4_Template, 16, 7, "div", 8);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](5, UploadComponent_div_2_div_5_Template, 3, 0, "div", 44);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](6, UploadComponent_div_2_div_6_Template, 12, 3, "div", 8);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -538,19 +469,19 @@ function UploadComponent_div_3_div_50_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](7, "br");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const data_r41 = ctx.$implicit;
+    const data_r37 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("Serial Number : ", data_r41.value.sn, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("Serial Number : ", data_r37.value.sn, "");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" Pownstring : ", data_r41.value.pownstring, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" Pownstring : ", data_r37.value.pownstring, "");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" Result : ", data_r41.value.result, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" Result : ", data_r37.value.result, "");
 } }
 function UploadComponent_div_3_Template(rf, ctx) { if (rf & 1) {
-    const _r43 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    const _r39 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 49);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 50);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_3_Template_div_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r43); const ctx_r42 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r42.showreceipt = false; });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_3_Template_div_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r39); const ctx_r38 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r38.showreceipt = false; });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 51);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 52);
@@ -558,7 +489,7 @@ function UploadComponent_div_3_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Details:");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 53);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_3_Template_div_click_6_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r43); const ctx_r44 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r44.showreceipt = false; });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function UploadComponent_div_3_Template_div_click_6_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r39); const ctx_r40 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r40.showreceipt = false; });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](7, "img", 54);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -648,12 +579,12 @@ function UploadComponent_div_3_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](51, 11, ctx_r2.payload == null ? null : ctx_r2.payload.data == null ? null : ctx_r2.payload.data.pown_results == null ? null : ctx_r2.payload.data.pown_results.coins, ctx_r2.returnZero));
 } }
 function UploadComponent_div_4_Template(rf, ctx) { if (rf & 1) {
-    const _r46 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    const _r42 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 59);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 60);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "ng-lottie", 61);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("animationCreated", function UploadComponent_div_4_Template_ng_lottie_animationCreated_3_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r46); const ctx_r45 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r45.animationCreated($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("animationCreated", function UploadComponent_div_4_Template_ng_lottie_animationCreated_3_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r42); const ctx_r41 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r41.animationCreated($event); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "span", 62);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
@@ -673,11 +604,6 @@ class UploadComponent {
         this.api = api;
         this.router = router;
         this.storage = storage;
-        this.dragDropConfig = {
-            showList: true,
-            showProgress: true
-        };
-        this.iscounterfeit = false;
         this.afterClick = false;
         this.showreceipt = false;
         this.file = [];
@@ -698,7 +624,6 @@ class UploadComponent {
     ngOnInit() {
         this.userLocal = localStorage.getItem('userLocal');
         this.type = localStorage.getItem('wallet');
-        // this.getTransaction();
     }
     getTransaction() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
@@ -720,58 +645,24 @@ class UploadComponent {
     showLoading(state) {
         this.loadingMessage = '';
         if (state) {
-            this.showNormal = false;
             this.showLoader = true;
-            this.showError = false;
         }
         else {
-            this.showNormal = true;
             this.showLoader = false;
-            this.showError = false;
         }
     }
     doCheck(taskID, xdata) {
         var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             let task = yield this.api.doCheck(taskID);
-            //console.log("Task done: ", taskID);
             if (task) {
                 this.payload = task.payload;
                 this.totalimport = (_b = (_a = this.payload.data) === null || _a === void 0 ? void 0 : _a.pown_results) === null || _b === void 0 ? void 0 : _b.total;
-                //console.log("payload.status:"+ this.payload.status)
                 if (this.payload.status == "error" || this.payload.status == "completed") {
                     if (this.payload.status == "completed") {
                         this.afterClick = true;
                         this.dateTime = new Date();
                         this.storage.setItem("wallet", "localwallet", 'upload');
-                        //console.log("in docheck, after click value:"+ this.afterClick)
-                        // let currentUrl = this.router.url;
-                        // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-                        // this.router.onSameUrlNavigation = 'reload';
-                        // this.router.navigate([currentUrl]);
-                        // this.getTransaction();
-                        // if (this.payload.data.limbo != 0) {
-                        //   Swal.fire({
-                        //     title: 'Contact was lost with the RAIDA during your request due to loss of internet connectivity. It is unknown if the coin passwords have been changed. This can be fixed once a solid internet connection is restored.',
-                        //     icon: 'warning',
-                        //     confirmButtonText: 'Okay',
-                        //   }).then((result) => {
-                        //     if (result.value) { { } }
-                        //   });
-                        // }
-                        // else if (this.payload.data.counterfeit != 0) {
-                        //   this.counterfeitCoin = this.payload.data.coins.filter(x=>{
-                        //     return x.result === "Counterfeit";
-                        //   })
-                        //   this.iscounterfeit = true;
-                        //   Swal.fire({
-                        //     title: this.payload.data.counterfeit + ' Counterfeit CC found!',
-                        //     icon: 'info',
-                        //     confirmButtonText: 'Okay',
-                        //   }).then((result) => {
-                        //     if (result.value) { { } }
-                        //   });
-                        // }
                         if (((_e = (_d = (_c = this.payload) === null || _c === void 0 ? void 0 : _c.data) === null || _d === void 0 ? void 0 : _d.pown_results) === null || _e === void 0 ? void 0 : _e.fracked) != 0) {
                             let data = {
                                 name: this.userLocal,
@@ -781,7 +672,7 @@ class UploadComponent {
                                     }],
                                 tickets: [(_k = (_j = this.payload.data) === null || _j === void 0 ? void 0 : _j.pown_results) === null || _k === void 0 ? void 0 : _k.tickets[0]]
                             };
-                            this.fixfracked(data);
+                            // this.fixfracked(data);
                         }
                     }
                     else {
@@ -793,7 +684,6 @@ class UploadComponent {
                         this.files = [];
                         this.base = [];
                         sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
-                            // title: "Failure! could not proceed with the transaction. " + this.payload?.data?.message,
                             title: 'The coins you attempted to import are not CloudCoins and not supported by this program. Please upgrade to a newer version',
                             icon: 'error',
                             confirmButtonText: 'Okay',
@@ -820,40 +710,6 @@ class UploadComponent {
                 this.btn = true;
             }
         });
-    }
-    // async getPath() {
-    //   try {
-    //     let response: any = await this.api.importFile();
-    //     console.log(response);
-    //     if (response.status == "success") {
-    //       this.files = response?.payload?.items_picked;
-    //       this.btn = false;
-    // var name = <HTMLInputElement>document.getElementById('fileInput');
-    // name.placeholder = "Selected " + response?.payload?.items_picked.length + " files";
-    //     } else {
-    //       Swal.fire({
-    //         title: "Try again!",
-    //         icon: 'error',
-    //         confirmButtonText: 'Okay',
-    //       }).then((result) => {
-    //         if (result.value) { { } }
-    //       });
-    //     }
-    //   }
-    //   catch (e) {
-    //     console.log(e);
-    //     Swal.fire({
-    //       title: "Try again!",
-    //       icon: 'error',
-    //       confirmButtonText: 'Okay',
-    //     }).then((result) => {
-    //       if (result.value) { { } }
-    //     });
-    //   }
-    // }
-    changRadio(e) {
-        this.coinsInfo = e.target.value;
-        this.files = [];
     }
     getPath() {
         var _a;
@@ -922,41 +778,7 @@ class UploadComponent {
                                 confirmButtonText: 'Okay',
                             });
                         }
-                        // if (this.coinsInfo == 'new') {
-                        //   if (last == 'stack') {
-                        //     this.files = [];
-                        //     Swal.fire({
-                        //       title: "Please select only new coins to import.",
-                        //       icon: 'error',
-                        //       confirmButtonText: 'Okay',
-                        //     }).then((result) => {
-                        //       if (result.value) { { } }
-                        //     });
-                        //   }
-                        // }
-                        //  else if (this.coinsInfo == 'old') {
-                        //   if (last != 'stack') {
-                        //     this.files = [];
-                        //     Swal.fire({
-                        //       title: "Please select only old coins to import.",
-                        //       icon: 'error',
-                        //       confirmButtonText: 'Okay',
-                        //     }).then((result) => {
-                        //       if (result.value) { { } }
-                        //     });
-                        //   }
-                        // }
                     }
-                    // var name = <HTMLInputElement>document.getElementById('fileInput');
-                    // name.placeholder = "Selected " + response?.payload?.items_picked.length + " files";
-                    // } else {
-                    //   Swal.fire({
-                    //     title: "Try again!",
-                    //     icon: 'error',
-                    //     confirmButtonText: 'Okay',
-                    //   }).then((result) => {
-                    //     if (result.value) { { } }
-                    //   });
                 }
             }
             catch (e) {
@@ -964,10 +786,8 @@ class UploadComponent {
             }
         });
     }
-    // Only AlphaNumeric with Some Characters [-_ ]
     keyPressAlphaNumericWithCharacters(event) {
         var inp = String.fromCharCode(event.keyCode);
-        // Allow numbers, alpahbets, space, underscore
         if (/[a-zA-Z0-9-_ ]/.test(inp)) {
             return true;
         }
@@ -976,31 +796,7 @@ class UploadComponent {
             return false;
         }
     }
-    // async importOld() {
-    //   try {
-    //     var toConvert: any[]
-    //     for (let i = 0; i < this.files.length; i++) {
-    //       toConvert.push({ 'type': 'file', 'data': this.files[i] })
-    //     }
-    //     var data = {
-    //       name: this.userLocal,
-    //       items: toConvert
-    //     }
-    //     let response: any = await this.api.convert(data);
-    //     if (response.status == 'success') {
-    //       this.showLoading(true);
-    //       this.doConvert(response.payload?.id, (data: any) => {
-    //         this.successInfo = true;
-    //         this.successMsg = "Done " + JSON.stringify(data)
-    //       });
-    //     }
-    //     console.log(response);
-    //   } catch (e) {
-    //     console.log(e);
-    //   }
-    // }
     getLength() {
-        // alert("length")
         console.log("tag :" + this.tag.length);
         if (this.tag.length > 64) {
             this.remarkInvalid = true;
@@ -1015,15 +811,11 @@ class UploadComponent {
         }
     }
     next() {
-        var _a, _b, _c, _d, _e;
+        var _a, _b, _c;
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            // if (this.files[this.files.length - 1].progress == 100) {
             this.delButton = true;
             if (this.coinsInfo == 'new') {
                 try {
-                    // for (let i = 0; i < this.baseAdd.length; i++) {
-                    //   this.base.push({ 'type': 'inline', 'data': this.baseAdd[i] })
-                    // }
                     for (let i = 0; i < ((_a = this.files) === null || _a === void 0 ? void 0 : _a.length); i++) {
                         this.base.push({ 'type': 'file', 'data': this.files[i] });
                     }
@@ -1035,8 +827,6 @@ class UploadComponent {
                     let response = yield this.api.import(data);
                     if (response.status === "success") {
                         this.btn = true;
-                        //this.afterClick = true ;
-                        //console.log("before loop:"+ this.afterClick)
                         this.doCheck((_b = response.payload) === null || _b === void 0 ? void 0 : _b.id, (data) => {
                             this.successInfo = true;
                             this.successMsg = "Done " + JSON.stringify(data);
@@ -1073,8 +863,6 @@ class UploadComponent {
             }
             else if (this.coinsInfo == 'old') {
                 try {
-                    console.log("the email is:" + this.email);
-                    console.log("old coins block:" + this.files.length);
                     var toConvert = [];
                     for (let i = 0; i < this.files.length; i++) {
                         toConvert.push({ 'type': 'file', 'data': this.files[i] });
@@ -1084,20 +872,15 @@ class UploadComponent {
                         items: toConvert,
                         email: this.email
                     };
-                    console.log("Before insert data:" + data1.name);
-                    console.log("items:" + data1.items);
-                    console.log("email:" + data1.email);
                     let response = yield this.api.convert(data1);
                     if (response.status == 'success') {
-                        console.log("message:" + ((_d = (_c = response.payload) === null || _c === void 0 ? void 0 : _c.data) === null || _d === void 0 ? void 0 : _d.message));
                         this.showLoading(true);
                         this.loadingMessage = 'Importing Coins...';
-                        this.doConvert((_e = response.payload) === null || _e === void 0 ? void 0 : _e.id, (data) => {
+                        this.doConvert((_c = response.payload) === null || _c === void 0 ? void 0 : _c.id, (data) => {
                             this.successInfo = true;
                             this.successMsg = "Done " + JSON.stringify(data);
                         });
                     }
-                    //console.log("payload code:" + response.payload.code);
                     else if (response.status == 'error') {
                         if (response.payload.code == 4121) {
                             sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
@@ -1127,8 +910,6 @@ class UploadComponent {
     fixfracked(data) {
         var _a;
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            this.showLoading(true);
-            this.loadingMessage = "Fixing fracked coin...";
             try {
                 let response = yield this.api.postFix(data);
                 console.log(response);
@@ -1139,9 +920,6 @@ class UploadComponent {
                         this.successMsg = "Done " + JSON.stringify(data);
                     });
                 }
-                else {
-                    this.showLoading(false);
-                }
             }
             catch (e) {
                 console.log(e);
@@ -1151,27 +929,15 @@ class UploadComponent {
     doCheck1(taskID, xdata) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             let task = yield this.api.doCheck(taskID);
-            //console.log("Task done: ", task);
             if (task) {
-                // this.payload = task.payload;
                 if (task.payload.status == "error" || task.payload.status == "completed") {
-                    this.showLoading(false);
                     if (task.payload.status == "completed") {
                         this.frackedDetail = task.payload.data;
                         if (task.payload.data.total_errors != 0 || task.payload.data.total_skipped != 0) {
-                            this.showLoading(false);
-                            // Swal.fire({
-                            //   title: "Coin could not be fixed!",
-                            //   icon: 'info',
-                            //   confirmButtonText: 'Okay',
-                            // }).then((result) => {
-                            //   if (result.value) { { } }
-                            // });
                         }
                     }
                     else {
                         this.btn = true;
-                        this.showLoading(false);
                         sweetalert2__WEBPACK_IMPORTED_MODULE_2___default.a.fire({
                             title: "Failure! could not fix the coin.",
                             icon: 'warning',
@@ -1241,39 +1007,10 @@ class UploadComponent {
         });
     }
     go() {
-        // let currentUrl = this.router.url;
-        // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-        // this.router.onSameUrlNavigation = 'reload';
-        // this.router.navigate([currentUrl]);
-        // this.storage.setItem("wallet", "localwallet", "upload");
-        // sessionStorage.setItem('trans', 'transaction');
         this.router.navigate(["/dashboard/home"]);
     }
-    onFileDropped($event) {
-        // this.prepareFilesList($event);
-    }
-    fileBrowseHandler(files) {
-        console.log(files);
-        // this.prepareFilesList(files);
-    }
-    /**
-     * Delete file from files list
-     * @param index (File index)
-     */
     deleteFile(index) {
-        // if (this.files[index].progress < 100) {
-        //   Swal.fire({
-        //     title: "Upload in progress",
-        //     icon: 'warning',
-        //     confirmButtonText: 'Okay',
-        //   }).then((result) => {
-        //     if (result.value) { { } }
-        //   });
-        //   return;
-        // }
         this.files.splice(index, 1);
-        // var name = <HTMLInputElement>document.getElementById('fileInput');
-        // name.placeholder = "Selected " + this.files.length + " files";
         if (this.files.length == 0) {
             this.btn = true;
             this.successInfo = false;
@@ -1287,7 +1024,7 @@ UploadComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineCo
     } if (rf & 2) {
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.fileDropEl = _t.first);
-    } }, decls: 5, vars: 4, consts: [["class", "transWrapper", 4, "ngIf"], ["class", "modalContainer", 4, "ngIf"], ["class", "onEventLoadWrap", 4, "ngIf"], [1, "transWrapper"], [1, "headerbackWrap"], ["href", "javascript:;", "routerLink", "/dashboard/home", 1, "backBtnInHeader"], ["src", "assets/arrow.svg", "alt", ""], [1, "titleOne"], ["class", "transBody", 4, "ngIf"], [1, "transBody"], [1, "row"], [1, "col-lg-12", "d-flex"], [1, "gap20"], [1, "formField"], ["for", ""], ["type", "text", "placeholder", "Ex: Pay for doing chores", 2, "width", "255px", 3, "ngModel", "ngModelChange", "keypress", "change"], [1, "gap10"], [1, "col-12"], ["href", "javascript:;", 1, "btnCustomBlue", 3, "click"], [1, "textWithIcon"], [1, "darkText", "ml-2"], [1, "col-6", "mt-2"], ["class", "progressWrap", 4, "ngIf"], ["class", "errorMsg", 4, "ngIf"], ["class", "", 4, "ngIf"], [1, ""], ["class", "file_upload justify-content-between", 4, "ngFor", "ngForOf"], [1, "info_text"], ["src", "assets/icons_info.png", "alt", "image", 1, "info_img"], [1, "transBottomFooter"], ["href", "javascript:;", 1, "btnCustomBlue", "btnLarge", "ml-3", 3, "ngClass", "click"], [1, "progressWrap"], [1, "progress"], ["role", "progressbar", "aria-valuenow", "60", "aria-valuemin", "0", "aria-valuemax", "100", 1, "progress-bar", "progress-bar-striped", 2, "background-color", "green!important", 3, "ngStyle"], [1, "errorMsg"], ["src", "assets/error_info_icon.svg", "alt", "error icon"], [1, "file_upload", "justify-content-between"], [1, "position-relative", "uploadtextWrap"], [1, "pl-2", "text-white", "text-left", "progress_text", 2, "display", "flex", "align-items", "center"], ["xmlns", "http://www.w3.org/2000/svg", "width", "16", "height", "16", "fill", "currentColor", "viewBox", "0 0 16 16", 1, "bi", "bi-cloud-download"], ["d", "M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"], ["d", "M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"], [1, "pl-2", "ulpldText"], ["href", "javascript:;", 1, "fa", "fa-trash", "text-danger", "fs-32", "pt-1", 3, "click"], ["class", "headerbackWrap", 4, "ngIf"], [2, "opacity", "0.7"], ["class", "formField", 4, "ngIf"], ["href", "javascript:;", 1, "btnCustomBlue", "btnLarge", 3, "click"], ["href", "javascript:;", 3, "click"], [1, "modalContainer"], [1, "modalOverlay", 3, "click"], [1, "modalWrap", "modalMedium"], [1, "modalHeader"], [1, "modalClose", 3, "click"], ["src", "assets/close-white.svg", "alt", "icon"], [1, "modalBody", "scroll1"], [1, "text-white", "mb-n1"], [1, "sectionOne"], [4, "ngFor", "ngForOf"], [1, "onEventLoadWrap"], [1, "text-center", "loader_show"], ["height", "150px", 3, "options", "animationCreated"], [2, "color", "#ffffff"]], template: function UploadComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 5, vars: 4, consts: [["class", "transWrapper", 4, "ngIf"], ["class", "modalContainer", 4, "ngIf"], ["class", "onEventLoadWrap", 4, "ngIf"], [1, "transWrapper"], [1, "headerbackWrap"], ["href", "javascript:;", "routerLink", "/dashboard/home", 1, "backBtnInHeader"], ["src", "assets/arrow.svg", "alt", ""], [1, "titleOne"], ["class", "transBody", 4, "ngIf"], [1, "transBody"], [1, "row"], [1, "col-lg-12", "d-flex"], [1, "gap20"], [1, "formField"], ["for", ""], ["type", "text", "placeholder", "Ex: Pay for doing chores", 2, "width", "255px", 3, "ngModel", "ngModelChange", "keypress", "change"], [1, "gap10"], [1, "col-12"], ["href", "javascript:;", 1, "btnCustomBlue", 3, "click"], [1, "textWithIcon"], [1, "darkText", "ml-2"], [1, "col-6", "mt-2"], ["class", "progressWrap", 4, "ngIf"], ["class", "errorMsg", 4, "ngIf"], ["class", "", 4, "ngIf"], [1, ""], ["class", "file_upload justify-content-between", 4, "ngFor", "ngForOf"], [1, "info_text"], ["src", "assets/icons_info1.png", "alt", "image", 1, "info_img"], [1, "transBottomFooter"], ["href", "javascript:;", 1, "btnCustomBlue", "btnLarge", "ml-3", 3, "ngClass", "click"], [1, "progressWrap"], [1, "progress"], ["role", "progressbar", "aria-valuenow", "60", "aria-valuemin", "0", "aria-valuemax", "100", 1, "progress-bar", "progress-bar-striped", 2, "background-color", "green!important", 3, "ngStyle"], [1, "errorMsg"], ["src", "assets/error_info_icon.svg", "alt", "error icon"], [1, "file_upload", "justify-content-between"], [1, "position-relative", "uploadtextWrap"], [1, "pl-2", "text-white", "text-left", "progress_text", 2, "display", "flex", "align-items", "center"], ["xmlns", "http://www.w3.org/2000/svg", "width", "16", "height", "16", "fill", "currentColor", "viewBox", "0 0 16 16", 1, "bi", "bi-cloud-download"], ["d", "M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"], ["d", "M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"], [1, "pl-2", "ulpldText"], ["href", "javascript:;", 1, "fa", "fa-trash", "text-danger", "fs-32", "pt-1", 3, "click"], ["class", "headerbackWrap", 4, "ngIf"], [2, "opacity", "0.7"], ["class", "formField", 4, "ngIf"], ["href", "javascript:;", 1, "btnCustomBlue", "btnLarge", 3, "click"], ["href", "javascript:;", 3, "click"], [1, "modalContainer"], [1, "modalOverlay", 3, "click"], [1, "modalWrap", "modalMedium"], [1, "modalHeader"], [1, "modalClose", 3, "click"], ["src", "assets/close-white.svg", "alt", "icon"], [1, "modalBody", "scroll1"], [1, "text-white", "mb-n1"], [1, "sectionOne"], [4, "ngFor", "ngForOf"], [1, "onEventLoadWrap"], [1, "text-center", "loader_show"], ["height", "150px", 3, "options", "animationCreated"], [2, "color", "#ffffff"]], template: function UploadComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, UploadComponent_div_0_Template, 7, 2, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, UploadComponent_div_2_Template, 7, 3, "div", 0);

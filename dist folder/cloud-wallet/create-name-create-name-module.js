@@ -75,7 +75,7 @@ function CreateNameComponent_div_32_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, CreateNameComponent_div_32_span_1_Template, 3, 0, "span", 33);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "span", 34);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "img", 35);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, " Only numbers, letters and special characters (except < > : | ? * \" / \\) are allowed.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, " Only numbers, letters and special characters (except <> : | ? * \" / \\) are allowed.");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {

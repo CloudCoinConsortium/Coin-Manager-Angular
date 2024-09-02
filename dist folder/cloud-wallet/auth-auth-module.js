@@ -32,37 +32,9 @@ const routes = [
                 loadChildren: () => __webpack_require__.e(/*! import() | create-skywallet-create-skywallet-module */ "create-skywallet-create-skywallet-module").then(__webpack_require__.bind(null, /*! ./create-skywallet/create-skywallet.module */ "ZeXD")).then(m => m.CreateSkywalletModule)
             },
             {
-                path: 'existing-login',
-                loadChildren: () => __webpack_require__.e(/*! import() | existing-wallet-login-existing-wallet-login-module */ "existing-wallet-login-existing-wallet-login-module").then(__webpack_require__.bind(null, /*! ./existing-wallet-login/existing-wallet-login.module */ "jigB")).then(m => m.ExistingWalletLoginModule)
-            },
-            {
                 path: 'localwallet',
                 loadChildren: () => __webpack_require__.e(/*! import() | create-localwallet-create-localwallet-module */ "create-localwallet-create-localwallet-module").then(__webpack_require__.bind(null, /*! ./create-localwallet/create-localwallet.module */ "fkH7")).then(m => m.CreateLocalwalletModule)
             }
-            // {
-            //   path: 'create-address',
-            //   loadChildren: () => import('./create-skywallet/create-address/create-address.module').then(m => m.CreateAddressModule)
-            // },
-            // {
-            //   path: 'security-setup',
-            //   loadChildren: () => import('./create-skywallet/security-setup/security-setup.module').then(m => m.SecuritySetupModule)
-            // },
-            // {
-            //   path: 'upload-cc',
-            //   loadChildren: () => import('./create-skywallet/upload-cc/upload-cc.module').then(m => m.UploadCcModule)
-            // },
-            // {
-            //   path: 'advanced-setup',
-            //   loadChildren: () => import('./create-skywallet/advanced-setup/advanced-setup.module').then(m => m.AdvancedSetupModule)
-            // },
-            // {
-            //   path: 'setup-password',
-            //   loadChildren: () => import('./create-skywallet/set-password/set-password.module').then(m => m.SetPasswordModule)
-            // },
-            // {
-            //   path: 'completed',
-            //   loadChildren: () => import('./create-skywallet/completed/completed.module').then(m => m.CompletedModule)
-            // },
         ]
     },
 ];

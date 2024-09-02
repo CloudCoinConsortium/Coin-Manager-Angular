@@ -68,10 +68,6 @@ const routes = [
                 loadChildren: () => __webpack_require__.e(/*! import() | download-download-module */ "download-download-module").then(__webpack_require__.bind(null, /*! ./download/download.module */ "KKCr")).then(m => m.DownloadModule)
             },
             {
-                path: 'buy',
-                loadChildren: () => __webpack_require__.e(/*! import() | buy-buy-module */ "buy-buy-module").then(__webpack_require__.bind(null, /*! ./buy/buy.module */ "30td")).then(m => m.BuyModule)
-            },
-            {
                 path: 'transfer',
                 loadChildren: () => Promise.all(/*! import() | transfer-transfer-module */[__webpack_require__.e("default~transfer-sky-transfer-sky-module~transfer-transfer-module"), __webpack_require__.e("transfer-transfer-module")]).then(__webpack_require__.bind(null, /*! ./transfer/transfer.module */ "fxjj")).then(m => m.TransferModule)
             },
@@ -86,10 +82,6 @@ const routes = [
             {
                 path: 'deposit',
                 loadChildren: () => __webpack_require__.e(/*! import() | deposit-sky-deposit-sky-module */ "deposit-sky-deposit-sky-module").then(__webpack_require__.bind(null, /*! ./deposit-sky/deposit-sky.module */ "6xIx")).then(m => m.DepositSkyModule)
-            },
-            {
-                path: 'success',
-                loadChildren: () => __webpack_require__.e(/*! import() | success-success-module */ "success-success-module").then(__webpack_require__.bind(null, /*! ./success/success.module */ "RsrD")).then(m => m.SuccessModule)
             },
         ]
     }

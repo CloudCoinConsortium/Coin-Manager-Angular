@@ -111,21 +111,9 @@ const routes = [
                 loadChildren: () => Promise.all(/*! import() | create-address-create-address-module */[__webpack_require__.e("common"), __webpack_require__.e("create-address-create-address-module")]).then(__webpack_require__.bind(null, /*! ./create-address/create-address.module */ "Xs42")).then(m => m.CreateAddressModule)
             },
             {
-                path: 'security-setup',
-                loadChildren: () => Promise.all(/*! import() | security-setup-security-setup-module */[__webpack_require__.e("common"), __webpack_require__.e("security-setup-security-setup-module")]).then(__webpack_require__.bind(null, /*! ./security-setup/security-setup.module */ "pc6D")).then(m => m.SecuritySetupModule)
-            },
-            {
-                path: 'setup-password',
-                loadChildren: () => Promise.all(/*! import() | set-password-set-password-module */[__webpack_require__.e("common"), __webpack_require__.e("set-password-set-password-module")]).then(__webpack_require__.bind(null, /*! ./set-password/set-password.module */ "4b0U")).then(m => m.SetPasswordModule)
-            },
-            {
                 path: 'upload-cc',
                 loadChildren: () => __webpack_require__.e(/*! import() | advanced-setup-advanced-setup-module */ "advanced-setup-advanced-setup-module").then(__webpack_require__.bind(null, /*! ./advanced-setup/advanced-setup.module */ "JHYt")).then(m => m.AdvancedSetupModule)
             },
-            // {
-            //   path: 'upload-cc',
-            //   loadChildren: () => import('./upload-cc/upload-cc.module').then(m => m.UploadCcModule)
-            // },
             {
                 path: 'completed',
                 loadChildren: () => __webpack_require__.e(/*! import() | completed-completed-module */ "completed-completed-module").then(__webpack_require__.bind(null, /*! ./completed/completed.module */ "F4A4")).then(m => m.CompletedModule)

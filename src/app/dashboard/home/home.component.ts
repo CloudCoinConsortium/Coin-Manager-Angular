@@ -1674,20 +1674,20 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
 
-  async fixFracked() {
-    try {
-      var data = {
-        name: this.userLocal
-      }
-      let response: any = await this.api.fix(data);
-      if (response.status === "success") {
-        this.doCheckFix(response.payload?.id, (data: any) => { })
-      }
-    }
-    catch (e) {
-      console.log(e);
-    }
-  }
+  // async fixFracked() {
+  //   try {
+  //     var data = {
+  //       name: this.userLocal
+  //     }
+  //     let response: any = await this.api.fix(data);
+  //     if (response.status === "success") {
+  //       this.doCheckFix(response.payload?.id, (data: any) => { })
+  //     }
+  //   }
+  //   catch (e) {
+  //     console.log(e);
+  //   }
+  // }
 
   async doCheckFix(taskID: any, xdata: any) {
     let task: any = await this.api.doCheck(taskID);
