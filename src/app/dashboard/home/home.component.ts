@@ -1595,6 +1595,9 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
           if (result.value) { }
         });
       } else if (this.transaction.payload?.balance != 0) {
+        this.checkFractured();
+      }
+      else {
         this.fixModal = !this.fixModal;
       }
      
@@ -1707,6 +1710,71 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       setTimeout(() => {
         this.doCheckFix(taskID, xdata)
       }, 500)
+    }
+  }
+
+  async checkFractured() {
+    try {
+      var data = this.userLocal;
+      let response: any = await this.api.getTransaction(data);
+
+      if (response.status == "success") {
+        this.showLoader1 = true;
+        this.loadingMessage = "Detecting fractured coins..."
+        if (response.payload?.fracked_count > 0) {
+          this.fixFractured();
+
+        }
+        else {
+          this.showLoader1 = true;
+          Swal.fire({
+            title: "No fractured coin found!",
+            icon: 'info',
+            confirmButtonText: 'Okay',
+          }).then((result) => {
+            if (result.value) {
+              {
+                this.router.navigate(['/dashboard/home'])
+              }
+            }
+          });
+          this.showLoader1 = false;
+        }
+        return;
+
+      }
+      else {
+        this.showLoader1 = false;
+      }
+
+    }
+    catch (e) {
+      this.showLoader1 = false;
+      console.log(e)
+    }
+    setTimeout(() => {
+      this.checkFractured()
+    }, 500)
+  }
+
+  fixFractured() {
+    this.showLoader1 = false;
+    this.fixModal = !this.fixModal;
+  }
+  async doCheckFractured(taskID: any, xdata: any) {
+    let task: any = await this.api.doCheck(taskID);
+    console.log("Task done: ", task);
+    if (task) {
+      this.payload = task.payload;
+      if (this.payload.status == "error" || this.payload.status == "completed") {
+        if (this.payload.status == "completed") {
+          this.showLoader1 = false;
+          this.fixModal = !this.fixModal;
+          return
+
+        }
+      }
+
     }
   }
 
