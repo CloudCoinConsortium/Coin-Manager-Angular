@@ -90,10 +90,7 @@
             <div class="gap10"></div>
             <div *ngIf="goTODash">
                 <div>
-                    <p class="subTitleTwo">You can click SYNC to synchronize your SkyVault on all RAIDA. You can also
-                        click
-                        on a
-                        serial number to fix a single coin.</p>
+                    <p class="subTitleTwo">Click SYNC ALL to synchronize all coins in your SkyVault on all RAIDA.</p>
                 </div>
                 <div class="gap10"></div>
                 <table class="text-white table-responsive-sm">
@@ -155,14 +152,12 @@
                                 {{syncProg?.data?.quorum_balance}}</td>
                         </tr>
                         <tr *ngFor="let sns of syncProg?.data?.sns | keyvalue: returnZero; let i = index;">
-                            <td><a class="text-blue" style="cursor: pointer;" (click)="syncOne(sns)">{{sns.key}}</a>
-                            </td>
+                            <td class="text-white">{{sns.key}}</td>
                             <td *ngFor="let elem of sns.value" [ngStyle]="{'background-color' : getBalColor(elem)}">
                                 <span [ngClass]="elem == 1 ? 'fa fa-check' : 'fa fa-minus'"></span>
                             </td>
                             <td [ngStyle]="{'background-color' : checkQuorum(sns.key) }">
-                                <span
-                                    [ngClass]="checkQuorum(sns.key) == 'green' ? 'fa fa-check' : 'fa fa-minus'"></span>
+                                <span [ngClass]="checkQuorum(sns.key) == 'green' ? 'fa fa-check' : 'fa fa-minus'"></span>
                             </td>
                         </tr>
                     </table>
@@ -184,7 +179,7 @@
     </div>
     <div class="transBottomFooter">
         <button class="btnCustomBlue" [ngClass]="{'btnDisable': syncProg?.status != 'completed'}" (click)="fixSky()"
-            *ngIf="!fixSkyvault">SYNC</button>
+            *ngIf="!fixSkyvault">SYNC ALL</button>
     </div>
 </div>
 

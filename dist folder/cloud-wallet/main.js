@@ -187,7 +187,7 @@ RaidaStatusComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdef
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\tabee\OneDrive\Desktop\CoinManager-frontend\Coin-Manager-Angular\src\main.ts */"zUnb");
+module.exports = __webpack_require__(/*! C:\Users\tabee\OneDrive\Desktop\angular\Coin-Manager-Angular\src\main.ts */"zUnb");
 
 
 /***/ }),
@@ -479,9 +479,15 @@ class ApiService {
             return yield this.http.delete(this.baseURL + 'statements/' + data).toPromise();
         });
     }
-    fixSky(data) {
+    // async fixSky(data: any) {
+    //   return await this.http.post(this.baseURL + 'sync', data).toPromise();
+    // }
+    syncAll(walletName) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            return yield this.http.post(this.baseURL + 'sync', data).toPromise();
+            const data = {
+                name: walletName
+            };
+            return yield this.http.post(this.baseURL + 'syncall', data).toPromise();
         });
     }
     getList() {

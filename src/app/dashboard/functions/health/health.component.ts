@@ -199,14 +199,27 @@ export class HealthComponent implements OnInit {
     }
   }
 
+  // async fixSky() {
+  //   try {
+  //     var data = {
+  //       name: this.userSky,
+  //       sync_items: this.syncProg?.data?.sns
+  //     }
+  //     let response: any = await this.api.fixSky(data);
+  //     if (response.status == "success") {
+  //       this.showLoading(true);
+  //       this.doFixsky(response.payload?.id, (data: any) => { })
+  //     }
+  //   }
+  //   catch (e) {
+  //     console.log(e);
+  //   }
+  // }
+
   async fixSky() {
     try {
-      var data = {
-        name: this.userSky,
-        sync_items: this.syncProg?.data?.sns
-      }
-      let response: any = await this.api.fixSky(data);
-      if (response.status == "success") {
+      let response: any = await this.api.syncAll(this.userSky);
+      if (response.status === "success") {
         this.showLoading(true);
         this.doFixsky(response.payload?.id, (data: any) => { })
       }
@@ -243,14 +256,27 @@ export class HealthComponent implements OnInit {
     }
   }
 
-  async syncOne(item: any) {
+  // async syncOne(item: any) {
+  //   try {
+  //     var data = {
+  //       name: this.userSky,
+  //       sync_items: { [item.key]: item.value }
+  //     }
+  //     let response: any = await this.api.fixSky(data);
+  //     if (response.status == "success") {
+  //       this.showLoading(true);
+  //       this.doFixsky(response.payload?.id, (data: any) => { })
+  //     }
+  //   }
+  //   catch (e) {
+  //     console.log(e);
+  //   }
+  // }
+
+  async syncAll(item: any) {
     try {
-      var data = {
-        name: this.userSky,
-        sync_items: { [item.key]: item.value }
-      }
-      let response: any = await this.api.fixSky(data);
-      if (response.status == "success") {
+      let response: any = await this.api.syncAll(this.userSky);
+      if (response.status === "success") {
         this.showLoading(true);
         this.doFixsky(response.payload?.id, (data: any) => { })
       }

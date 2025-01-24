@@ -283,7 +283,7 @@ function HealthComponent_div_1_div_7_div_6_td_79_Template(rf, ctx) { if (rf & 1)
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](balance_r16);
 } }
-function HealthComponent_div_1_div_7_div_6_tr_82_td_4_Template(rf, ctx) { if (rf & 1) {
+function HealthComponent_div_1_div_7_div_6_tr_82_td_3_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "td", 38);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "span", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -295,23 +295,19 @@ function HealthComponent_div_1_div_7_div_6_tr_82_td_4_Template(rf, ctx) { if (rf
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", elem_r21 == 1 ? "fa fa-check" : "fa fa-minus");
 } }
 function HealthComponent_div_1_div_7_div_6_tr_82_Template(rf, ctx) { if (rf & 1) {
-    const _r23 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "a", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HealthComponent_div_1_div_7_div_6_tr_82_Template_a_click_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r23); const sns_r18 = ctx.$implicit; const ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](4); return ctx_r22.syncOne(sns_r18); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](4, HealthComponent_div_1_div_7_div_6_tr_82_td_4_Template, 2, 4, "td", 37);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "td", 38);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](6, "span", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](3, HealthComponent_div_1_div_7_div_6_tr_82_td_3_Template, 2, 4, "td", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "td", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](5, "span", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const sns_r18 = ctx.$implicit;
     const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](sns_r18.key);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", sns_r18.value);
@@ -324,7 +320,7 @@ function HealthComponent_div_1_div_7_div_6_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "p", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "You can click SYNC to synchronize your SkyVault on all RAIDA. You can also click on a serial number to fix a single coin.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Click SYNC ALL to synchronize all coins in your SkyVault on all RAIDA.");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](4, "div", 14);
@@ -441,7 +437,7 @@ function HealthComponent_div_1_div_7_div_6_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](81);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](82, HealthComponent_div_1_div_7_div_6_tr_82_Template, 7, 6, "tr", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](82, HealthComponent_div_1_div_7_div_6_tr_82_Template, 6, 6, "tr", 39);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](83, "keyvalue");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -476,16 +472,16 @@ function HealthComponent_div_1_div_7_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r8.goTODash);
 } }
 function HealthComponent_div_1_div_8_button_11_Template(rf, ctx) { if (rf & 1) {
-    const _r26 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "button", 45);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HealthComponent_div_1_div_8_button_11_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r26); const ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r25.goTODash ? ctx_r25.router.navigate(["/dashboard/home"]) : ""; });
+    const _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "button", 44);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HealthComponent_div_1_div_8_button_11_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r24); const ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r23.goTODash ? ctx_r23.router.navigate(["/dashboard/home"]) : ""; });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "Close");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } }
 function HealthComponent_div_1_div_8_Template(rf, ctx) { if (rf & 1) {
-    const _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    const _r26 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "h4", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "h4", 40);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Synchronization complete for the SkyVault: ");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "span");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
@@ -496,11 +492,11 @@ function HealthComponent_div_1_div_8_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](7, "div", 7);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "button", 43);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HealthComponent_div_1_div_8_Template_button_click_9_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r28); const ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r27.again(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "button", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HealthComponent_div_1_div_8_Template_button_click_9_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r26); const ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r25.again(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, "View SkyVault Status");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, HealthComponent_div_1_div_8_button_11_Template, 2, 0, "button", 44);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, HealthComponent_div_1_div_8_button_11_Template, 2, 0, "button", 43);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -511,10 +507,10 @@ function HealthComponent_div_1_div_8_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r9.fixSkyvault);
 } }
 function HealthComponent_div_1_button_10_Template(rf, ctx) { if (rf & 1) {
-    const _r30 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    const _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "button", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HealthComponent_div_1_button_10_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r30); const ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r29.fixSky(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "SYNC");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HealthComponent_div_1_button_10_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r28); const ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r27.fixSky(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "SYNC ALL");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
@@ -547,14 +543,14 @@ function HealthComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx_r1.fixSkyvault);
 } }
 function HealthComponent_div_2_Template(rf, ctx) { if (rf & 1) {
-    const _r32 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 46);
+    const _r30 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 45);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 47);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "ng-lottie", 48);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("animationCreated", function HealthComponent_div_2_Template_ng_lottie_animationCreated_3_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r32); const ctx_r31 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r31.animationCreated($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "ng-lottie", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("animationCreated", function HealthComponent_div_2_Template_ng_lottie_animationCreated_3_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r30); const ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r29.animationCreated($event); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "span", 49);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "span", 48);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Syncing SkyVault with RAIDA...");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -756,18 +752,30 @@ class HealthComponent {
             }
         });
     }
+    // async fixSky() {
+    //   try {
+    //     var data = {
+    //       name: this.userSky,
+    //       sync_items: this.syncProg?.data?.sns
+    //     }
+    //     let response: any = await this.api.fixSky(data);
+    //     if (response.status == "success") {
+    //       this.showLoading(true);
+    //       this.doFixsky(response.payload?.id, (data: any) => { })
+    //     }
+    //   }
+    //   catch (e) {
+    //     console.log(e);
+    //   }
+    // }
     fixSky() {
-        var _a, _b, _c;
+        var _a;
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
-                var data = {
-                    name: this.userSky,
-                    sync_items: (_b = (_a = this.syncProg) === null || _a === void 0 ? void 0 : _a.data) === null || _b === void 0 ? void 0 : _b.sns
-                };
-                let response = yield this.api.fixSky(data);
-                if (response.status == "success") {
+                let response = yield this.api.syncAll(this.userSky);
+                if (response.status === "success") {
                     this.showLoading(true);
-                    this.doFixsky((_c = response.payload) === null || _c === void 0 ? void 0 : _c.id, (data) => { });
+                    this.doFixsky((_a = response.payload) === null || _a === void 0 ? void 0 : _a.id, (data) => { });
                 }
             }
             catch (e) {
@@ -806,16 +814,28 @@ class HealthComponent {
             }
         });
     }
-    syncOne(item) {
+    // async syncOne(item: any) {
+    //   try {
+    //     var data = {
+    //       name: this.userSky,
+    //       sync_items: { [item.key]: item.value }
+    //     }
+    //     let response: any = await this.api.fixSky(data);
+    //     if (response.status == "success") {
+    //       this.showLoading(true);
+    //       this.doFixsky(response.payload?.id, (data: any) => { })
+    //     }
+    //   }
+    //   catch (e) {
+    //     console.log(e);
+    //   }
+    // }
+    syncAll(item) {
         var _a;
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
-                var data = {
-                    name: this.userSky,
-                    sync_items: { [item.key]: item.value }
-                };
-                let response = yield this.api.fixSky(data);
-                if (response.status == "success") {
+                let response = yield this.api.syncAll(this.userSky);
+                if (response.status === "success") {
                     this.showLoading(true);
                     this.doFixsky((_a = response.payload) === null || _a === void 0 ? void 0 : _a.id, (data) => { });
                 }
@@ -844,7 +864,7 @@ class HealthComponent {
     }
 }
 HealthComponent.ɵfac = function HealthComponent_Factory(t) { return new (t || HealthComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"])); };
-HealthComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: HealthComponent, selectors: [["app-health"]], decls: 3, vars: 3, consts: [["class", "transWrapper", 4, "ngIf"], ["class", "onEventLoadWrap", 4, "ngIf"], [1, "transWrapper"], [1, "headerbackWrap"], ["href", "javascript:;", "routerLink", "/dashboard/home", 1, "backBtnInHeader"], ["src", "assets/arrow.svg", "alt", ""], [1, "titleOne"], [1, "gap20"], [1, "transBody"], [1, "subTitleTwo"], [1, "headthSubHed"], [1, "lineSection"], ["class", "progressWrap", 4, "ngIf"], ["class", "formField", 4, "ngIf"], [1, "gap10"], ["class", "healthList", 4, "ngIf"], [1, "transBottomFooter"], [1, "btnCustomBlue", 3, "ngClass", "click"], [1, "progressWrap"], [1, "progress"], ["role", "progressbar", "aria-valuenow", "55", "aria-valuemin", "0", "aria-valuemax", "100", 1, "progress-bar", "progress-bar-striped", 2, "background-color", "green!important", 3, "ngStyle"], [1, "formField"], [1, "checkboxInpHolder"], ["src", "assets/green-check.svg", "alt", "icon"], [2, "color", "#2a4"], [1, "healthList"], [1, "healthListDiv"], ["class", "transBody", 4, "ngIf"], ["class", "btnCustomBlue", 3, "ngClass", "click", 4, "ngIf"], [4, "ngIf"], ["role", "progressbar", "aria-valuenow", "60", "aria-valuemin", "0", "aria-valuemax", "100", 1, "progress-bar", "progress-bar-striped", 2, "background-color", "green!important", 3, "ngStyle"], [1, "text-white", "table-responsive-sm"], [1, "colorBox", "mr-1", 2, "background-color", "green"], [1, "colorBox", "mr-1", "ml-2", 2, "background-color", "red"], [1, "colorBox", "mr-1", "ml-2", 2, "background-color", "gray"], [1, "colorBox", "mr-1", "ml-2", 2, "background-color", "yellow"], [1, "text-white", "table", "table-bordered", "table-responsive-sm", "text-center"], [3, "ngStyle", 4, "ngFor", "ngForOf"], [3, "ngStyle"], [4, "ngFor", "ngForOf"], [1, "text-blue", 2, "cursor", "pointer", 3, "click"], [3, "ngClass"], [1, "text-white"], ["routerLink", "/dashboard/functions/health_check", 1, "btnCustomBlue", 3, "click"], ["class", "btnCustomBlue ml-3", 3, "click", 4, "ngIf"], [1, "btnCustomBlue", "ml-3", 3, "click"], [1, "onEventLoadWrap"], [1, "text-center", "loader_show"], ["height", "150px", 3, "options", "animationCreated"], [2, "color", "#ffffff"]], template: function HealthComponent_Template(rf, ctx) { if (rf & 1) {
+HealthComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: HealthComponent, selectors: [["app-health"]], decls: 3, vars: 3, consts: [["class", "transWrapper", 4, "ngIf"], ["class", "onEventLoadWrap", 4, "ngIf"], [1, "transWrapper"], [1, "headerbackWrap"], ["href", "javascript:;", "routerLink", "/dashboard/home", 1, "backBtnInHeader"], ["src", "assets/arrow.svg", "alt", ""], [1, "titleOne"], [1, "gap20"], [1, "transBody"], [1, "subTitleTwo"], [1, "headthSubHed"], [1, "lineSection"], ["class", "progressWrap", 4, "ngIf"], ["class", "formField", 4, "ngIf"], [1, "gap10"], ["class", "healthList", 4, "ngIf"], [1, "transBottomFooter"], [1, "btnCustomBlue", 3, "ngClass", "click"], [1, "progressWrap"], [1, "progress"], ["role", "progressbar", "aria-valuenow", "55", "aria-valuemin", "0", "aria-valuemax", "100", 1, "progress-bar", "progress-bar-striped", 2, "background-color", "green!important", 3, "ngStyle"], [1, "formField"], [1, "checkboxInpHolder"], ["src", "assets/green-check.svg", "alt", "icon"], [2, "color", "#2a4"], [1, "healthList"], [1, "healthListDiv"], ["class", "transBody", 4, "ngIf"], ["class", "btnCustomBlue", 3, "ngClass", "click", 4, "ngIf"], [4, "ngIf"], ["role", "progressbar", "aria-valuenow", "60", "aria-valuemin", "0", "aria-valuemax", "100", 1, "progress-bar", "progress-bar-striped", 2, "background-color", "green!important", 3, "ngStyle"], [1, "text-white", "table-responsive-sm"], [1, "colorBox", "mr-1", 2, "background-color", "green"], [1, "colorBox", "mr-1", "ml-2", 2, "background-color", "red"], [1, "colorBox", "mr-1", "ml-2", 2, "background-color", "gray"], [1, "colorBox", "mr-1", "ml-2", 2, "background-color", "yellow"], [1, "text-white", "table", "table-bordered", "table-responsive-sm", "text-center"], [3, "ngStyle", 4, "ngFor", "ngForOf"], [3, "ngStyle"], [4, "ngFor", "ngForOf"], [1, "text-white"], [3, "ngClass"], ["routerLink", "/dashboard/functions/health_check", 1, "btnCustomBlue", 3, "click"], ["class", "btnCustomBlue ml-3", 3, "click", 4, "ngIf"], [1, "btnCustomBlue", "ml-3", 3, "click"], [1, "onEventLoadWrap"], [1, "text-center", "loader_show"], ["height", "150px", 3, "options", "animationCreated"], [2, "color", "#ffffff"]], template: function HealthComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, HealthComponent_div_0_Template, 23, 7, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, HealthComponent_div_1_Template, 11, 3, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, HealthComponent_div_2_Template, 6, 1, "div", 1);

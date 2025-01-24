@@ -201,8 +201,15 @@ export class ApiService implements HttpInterceptor {
     return await this.http.delete(this.baseURL + 'statements/' + data).toPromise();
   }
 
-  async fixSky(data: any) {
-    return await this.http.post(this.baseURL + 'sync', data).toPromise();
+  // async fixSky(data: any) {
+  //   return await this.http.post(this.baseURL + 'sync', data).toPromise();
+  // }
+
+  async syncAll(walletName: string) {
+    const data = {
+      name: walletName
+    };
+    return await this.http.post(this.baseURL + 'syncall', data).toPromise();
   }
 
   async getList() {
